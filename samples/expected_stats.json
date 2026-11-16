@@ -1,0 +1,36 @@
+{
+  "occurrences": 88,
+  "due": 44,
+  "done": 14,
+  "partial": 21,
+  "missed": 9,
+  "reps_planned": 1320,
+  "reps_credited": 994,
+  "reps_total": 994,
+  "form_weighted": 91.37786720321932,
+  "rom_weighted": 81.52897384305835,
+  "longest_streak": 4,
+  "current_streak": 1,
+  "per_exercise": {
+    "shoulder_extension": {
+      "reps_credited": 198,
+      "missed": 3,
+      "form_weighted": 91.09646464646464
+    },
+    "hip_extension": {
+      "reps_credited": 202,
+      "missed": 1,
+      "form_weighted": 92.18267326732673
+    },
+    "squat": {
+      "reps_credited": 224,
+      "missed": 4,
+      "form_weighted": 90.13571428571429
+    },
+    "elbow_extension": {
+      "reps_credited": 370,
+      "missed": 1,
+      "form_weighted": 91.84108108108107
+    }
+  }
+}
