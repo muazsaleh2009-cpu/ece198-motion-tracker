@@ -35,7 +35,7 @@ therapypal/
 
 ```bash
 pip install -r requirements.txt           # mediapipe, opencv
-# download the MediaPipe "Pose Landmarker (Full)" model and save it here as pose_landmarker.task
+# the MediaPipe "Pose Landmarker (Full)" model is included as pose_landmarker.task
 
 python -m tracker --list                                   # the exercises and their angles
 python -m tracker --plan plan.json                         # everything scheduled today

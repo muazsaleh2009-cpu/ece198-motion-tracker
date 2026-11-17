@@ -3,7 +3,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .DS_Store
-pose_landmarker.task
 *.mp4
 *.mov
 sessions/
