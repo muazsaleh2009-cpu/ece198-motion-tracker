@@ -1,0 +1,5117 @@
+{
+  "schema_version": "1.1",
+  "session_id": "20261024T184400-191e2c",
+  "patient_id": "pt-001",
+  "plan_id": "plan-demo-001",
+  "started_at": "2026-10-24T18:44:00-04:00",
+  "ended_at": "2026-10-24T18:49:14-04:00",
+  "duration_s": 314.8,
+  "device": {
+    "tracker": "therapypal-tracker",
+    "tracker_version": "1.1.0",
+    "pose_model": "mediapipe-pose-landmarker",
+    "camera_index": 0,
+    "frame_size": [
+      1280,
+      720
+    ]
+  },
+  "blocks": [
+    {
+      "block_id": "elbow-ext-1-2026-10-24",
+      "exercise_key": "elbow_extension",
+      "plan_item_id": "elbow-ext-1",
+      "scheduled_date": "2026-10-24",
+      "side": "right",
+      "camera_view": "side",
+      "angle": {
+        "name": "Elbow flexion (0 = fully extended)",
+        "unit": "deg",
+        "convention": "Measured as elbow flexion: starts about 90 deg (elbow bent) and falls toward 0 deg (arm straight).",
+        "start_angle_deg": 90.0,
+        "target_angle_deg": 0.0,
+        "direction": "decrease"
+      },
+      "prescribed": {
+        "sets": 3,
+        "reps_per_set": 12,
+        "target_angle_deg": 0.0,
+        "hold_seconds": 1.0,
+        "rest_seconds": 45
+      },
+      "started_at": "2026-10-24T18:44:00-04:00",
+      "ended_at": "2026-10-24T18:48:54-04:00",
+      "duration_s": 294.8,
+      "status": "partial",
+      "sets": [
+        {
+          "set_number": 1,
+          "target_reps": 12,
+          "completed_reps": 11,
+          "attempts_not_counted": 1,
+          "t_start_s": 0.0,
+          "t_end_s": 67.07,
+          "ended_by": "manual",
+          "reps": [
+            {
+              "counted": true,
+              "t_start_s": 1.3,
+              "t_end_s": 5.0,
+              "duration_s": 3.7,
+              "time_to_peak_s": 1.57,
+              "return_s": 2.13,
+              "start_angle_deg": 72.8,
+              "peak_angle_deg": 17.9,
+              "target_angle_deg": 0.0,
+              "rom_deg": 54.9,
+              "rom_pct": 80.1,
+              "reached_target": false,
+              "hold_s": 2.0,
+              "form_score": 91.0,
+              "components": {
+                "rom": 0.801,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 15.8,
+                "trunk_motion": 11.4
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 1
+            },
+            {
+              "counted": true,
+              "t_start_s": 7.23,
+              "t_end_s": 11.0,
+              "duration_s": 3.77,
+              "time_to_peak_s": 1.4,
+              "return_s": 2.37,
+              "start_angle_deg": 72.6,
+              "peak_angle_deg": 20.3,
+              "target_angle_deg": 0.0,
+              "rom_deg": 52.4,
+              "rom_pct": 77.5,
+              "reached_target": false,
+              "hold_s": 2.27,
+              "form_score": 89.9,
+              "components": {
+                "rom": 0.775,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.4,
+                "trunk_motion": 9.7
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 2
+            },
+            {
+              "counted": true,
+              "t_start_s": 13.07,
+              "t_end_s": 16.5,
+              "duration_s": 3.43,
+              "time_to_peak_s": 2.2,
+              "return_s": 1.23,
+              "start_angle_deg": 74.4,
+              "peak_angle_deg": 24.0,
+              "target_angle_deg": 0.0,
+              "rom_deg": 50.4,
+              "rom_pct": 73.3,
+              "reached_target": false,
+              "hold_s": 2.1,
+              "form_score": 88.0,
+              "components": {
+                "rom": 0.733,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.8,
+                "trunk_motion": 9.8
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 3
+            },
+            {
+              "counted": false,
+              "t_start_s": 18.57,
+              "t_end_s": 21.93,
+              "duration_s": 3.37,
+              "time_to_peak_s": 2.27,
+              "return_s": 1.1,
+              "start_angle_deg": 72.6,
+              "peak_angle_deg": 27.1,
+              "target_angle_deg": 0.0,
+              "rom_deg": 45.6,
+              "rom_pct": 69.9,
+              "reached_target": false,
+              "hold_s": 2.13,
+              "form_score": 86.5,
+              "components": {
+                "rom": 0.699,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 13.0,
+                "trunk_motion": 9.9
+              },
+              "flags": [],
+              "rep_index": null
+            },
+            {
+              "counted": true,
+              "t_start_s": 23.93,
+              "t_end_s": 27.37,
+              "duration_s": 3.43,
+              "time_to_peak_s": 1.87,
+              "return_s": 1.57,
+              "start_angle_deg": 74.3,
+              "peak_angle_deg": 17.6,
+              "target_angle_deg": 0.0,
+              "rom_deg": 56.8,
+              "rom_pct": 80.5,
+              "reached_target": false,
+              "hold_s": 1.97,
+              "form_score": 91.2,
+              "components": {
+                "rom": 0.805,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.5,
+                "trunk_motion": 10.4
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 4
+            },
+            {
+              "counted": true,
+              "t_start_s": 29.17,
+              "t_end_s": 31.83,
+              "duration_s": 2.67,
+              "time_to_peak_s": 1.47,
+              "return_s": 1.2,
+              "start_angle_deg": 75.9,
+              "peak_angle_deg": 20.4,
+              "target_angle_deg": 0.0,
+              "rom_deg": 55.6,
+              "rom_pct": 77.4,
+              "reached_target": false,
+              "hold_s": 1.37,
+              "form_score": 89.8,
+              "components": {
+                "rom": 0.774,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.3,
+                "trunk_motion": 9.7
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 5
+            },
+            {
+              "counted": true,
+              "t_start_s": 33.83,
+              "t_end_s": 37.27,
+              "duration_s": 3.43,
+              "time_to_peak_s": 2.0,
+              "return_s": 1.43,
+              "start_angle_deg": 75.5,
+              "peak_angle_deg": 20.0,
+              "target_angle_deg": 0.0,
+              "rom_deg": 55.6,
+              "rom_pct": 77.8,
+              "reached_target": false,
+              "hold_s": 1.6,
+              "form_score": 89.7,
+              "components": {
+                "rom": 0.778,
+                "compensation": 0.987,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 14.3,
+                "trunk_motion": 12.3
+              },
+              "flags": [
+                "trunk_motion",
+                "short_of_target"
+              ],
+              "rep_index": 6
+            },
+            {
+              "counted": true,
+              "t_start_s": 39.47,
+              "t_end_s": 43.1,
+              "duration_s": 3.63,
+              "time_to_peak_s": 1.63,
+              "return_s": 2.0,
+              "start_angle_deg": 76.3,
+              "peak_angle_deg": 19.6,
+              "target_angle_deg": 0.0,
+              "rom_deg": 56.7,
+              "rom_pct": 78.2,
+              "reached_target": false,
+              "hold_s": 2.0,
+              "form_score": 90.2,
+              "components": {
+                "rom": 0.782,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 14.1,
+                "trunk_motion": 11.6
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 7
+            },
+            {
+              "counted": true,
+              "t_start_s": 45.27,
+              "t_end_s": 48.57,
+              "duration_s": 3.3,
+              "time_to_peak_s": 1.97,
+              "return_s": 1.33,
+              "start_angle_deg": 75.8,
+              "peak_angle_deg": 18.3,
+              "target_angle_deg": 0.0,
+              "rom_deg": 57.5,
+              "rom_pct": 79.7,
+              "reached_target": false,
+              "hold_s": 1.67,
+              "form_score": 90.0,
+              "components": {
+                "rom": 0.797,
+                "compensation": 0.966,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 15.2,
+                "trunk_motion": 12.8
+              },
+              "flags": [
+                "trunk_motion",
+                "short_of_target"
+              ],
+              "rep_index": 8
+            },
+            {
+              "counted": true,
+              "t_start_s": 50.73,
+              "t_end_s": 53.9,
+              "duration_s": 3.17,
+              "time_to_peak_s": 1.83,
+              "return_s": 1.33,
+              "start_angle_deg": 73.3,
+              "peak_angle_deg": 27.0,
+              "target_angle_deg": 0.0,
+              "rom_deg": 46.3,
+              "rom_pct": 70.0,
+              "reached_target": false,
+              "hold_s": 1.83,
+              "form_score": 86.5,
+              "components": {
+                "rom": 0.7,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.3,
+                "trunk_motion": 10.0
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 9
+            },
+            {
+              "counted": true,
+              "t_start_s": 55.9,
+              "t_end_s": 58.97,
+              "duration_s": 3.07,
+              "time_to_peak_s": 1.27,
+              "return_s": 1.8,
+              "start_angle_deg": 74.9,
+              "peak_angle_deg": 18.4,
+              "target_angle_deg": 0.0,
+              "rom_deg": 56.5,
+              "rom_pct": 79.6,
+              "reached_target": false,
+              "hold_s": 1.6,
+              "form_score": 90.8,
+              "components": {
+                "rom": 0.796,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.8,
+                "trunk_motion": 9.4
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 10
+            },
+            {
+              "counted": true,
+              "t_start_s": 61.13,
+              "t_end_s": 64.73,
+              "duration_s": 3.6,
+              "time_to_peak_s": 1.77,
+              "return_s": 1.83,
+              "start_angle_deg": 73.9,
+              "peak_angle_deg": 21.4,
+              "target_angle_deg": 0.0,
+              "rom_deg": 52.5,
+              "rom_pct": 76.2,
+              "reached_target": false,
+              "hold_s": 1.93,
+              "form_score": 89.3,
+              "components": {
+                "rom": 0.762,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 14.0,
+                "trunk_motion": 11.6
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 11
+            }
+          ]
+        },
+        {
+          "set_number": 2,
+          "target_reps": 12,
+          "completed_reps": 11,
+          "attempts_not_counted": 1,
+          "t_start_s": 112.1,
+          "t_end_s": 181.8,
+          "ended_by": "manual",
+          "reps": [
+            {
+              "counted": true,
+              "t_start_s": 113.73,
+              "t_end_s": 116.47,
+              "duration_s": 2.73,
+              "time_to_peak_s": 1.33,
+              "return_s": 1.4,
+              "start_angle_deg": 75.3,
+              "peak_angle_deg": 26.8,
+              "target_angle_deg": 0.0,
+              "rom_deg": 48.5,
+              "rom_pct": 70.2,
+              "reached_target": false,
+              "hold_s": 1.63,
+              "form_score": 86.6,
+              "components": {
+                "rom": 0.702,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.9,
+                "trunk_motion": 9.8
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 1
+            },
+            {
+              "counted": true,
+              "t_start_s": 118.37,
+              "t_end_s": 121.93,
+              "duration_s": 3.57,
+              "time_to_peak_s": 1.9,
+              "return_s": 1.67,
+              "start_angle_deg": 76.4,
+              "peak_angle_deg": 14.2,
+              "target_angle_deg": 0.0,
+              "rom_deg": 62.2,
+              "rom_pct": 84.2,
+              "reached_target": false,
+              "hold_s": 1.87,
+              "form_score": 92.3,
+              "components": {
+                "rom": 0.842,
+                "compensation": 0.974,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 15.7,
+                "trunk_motion": 12.6
+              },
+              "flags": [
+                "trunk_motion",
+                "short_of_target"
+              ],
+              "rep_index": 2
+            },
+            {
+              "counted": true,
+              "t_start_s": 123.97,
+              "t_end_s": 126.93,
+              "duration_s": 2.97,
+              "time_to_peak_s": 1.33,
+              "return_s": 1.63,
+              "start_angle_deg": 75.0,
+              "peak_angle_deg": 20.8,
+              "target_angle_deg": 0.0,
+              "rom_deg": 54.2,
+              "rom_pct": 76.9,
+              "reached_target": false,
+              "hold_s": 1.63,
+              "form_score": 89.6,
+              "components": {
+                "rom": 0.769,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 13.7,
+                "trunk_motion": 10.7
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 3
+            },
+            {
+              "counted": true,
+              "t_start_s": 128.97,
+              "t_end_s": 132.6,
+              "duration_s": 3.63,
+              "time_to_peak_s": 1.9,
+              "return_s": 1.73,
+              "start_angle_deg": 73.3,
+              "peak_angle_deg": 23.9,
+              "target_angle_deg": 0.0,
+              "rom_deg": 49.3,
+              "rom_pct": 73.4,
+              "reached_target": false,
+              "hold_s": 2.2,
+              "form_score": 88.0,
+              "components": {
+                "rom": 0.734,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.1,
+                "trunk_motion": 10.0
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 4
+            },
+            {
+              "counted": false,
+              "t_start_s": 134.83,
+              "t_end_s": 138.7,
+              "duration_s": 3.87,
+              "time_to_peak_s": 2.3,
+              "return_s": 1.57,
+              "start_angle_deg": 72.8,
+              "peak_angle_deg": 27.2,
+              "target_angle_deg": 0.0,
+              "rom_deg": 45.5,
+              "rom_pct": 69.7,
+              "reached_target": false,
+              "hold_s": 2.37,
+              "form_score": 86.4,
+              "components": {
+                "rom": 0.697,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.7,
+                "trunk_motion": 9.2
+              },
+              "flags": [],
+              "rep_index": null
+            },
+            {
+              "counted": true,
+              "t_start_s": 141.0,
+              "t_end_s": 145.1,
+              "duration_s": 4.1,
+              "time_to_peak_s": 2.1,
+              "return_s": 2.0,
+              "start_angle_deg": 73.7,
+              "peak_angle_deg": 20.5,
+              "target_angle_deg": 0.0,
+              "rom_deg": 53.3,
+              "rom_pct": 77.3,
+              "reached_target": false,
+              "hold_s": 2.4,
+              "form_score": 89.8,
+              "components": {
+                "rom": 0.773,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 13.1,
+                "trunk_motion": 10.6
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 5
+            },
+            {
+              "counted": true,
+              "t_start_s": 147.3,
+              "t_end_s": 150.77,
+              "duration_s": 3.47,
+              "time_to_peak_s": 1.93,
+              "return_s": 1.53,
+              "start_angle_deg": 74.7,
+              "peak_angle_deg": 19.7,
+              "target_angle_deg": 0.0,
+              "rom_deg": 55.1,
+              "rom_pct": 78.1,
+              "reached_target": false,
+              "hold_s": 1.7,
+              "form_score": 90.2,
+              "components": {
+                "rom": 0.781,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.9,
+                "trunk_motion": 10.3
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 6
+            },
+            {
+              "counted": true,
+              "t_start_s": 153.17,
+              "t_end_s": 157.33,
+              "duration_s": 4.17,
+              "time_to_peak_s": 1.77,
+              "return_s": 2.4,
+              "start_angle_deg": 72.7,
+              "peak_angle_deg": 22.0,
+              "target_angle_deg": 0.0,
+              "rom_deg": 50.7,
+              "rom_pct": 75.5,
+              "reached_target": false,
+              "hold_s": 2.43,
+              "form_score": 89.0,
+              "components": {
+                "rom": 0.755,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 13.1,
+                "trunk_motion": 10.4
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 7
+            },
+            {
+              "counted": true,
+              "t_start_s": 159.63,
+              "t_end_s": 163.27,
+              "duration_s": 3.63,
+              "time_to_peak_s": 2.03,
+              "return_s": 1.6,
+              "start_angle_deg": 73.9,
+              "peak_angle_deg": 17.1,
+              "target_angle_deg": 0.0,
+              "rom_deg": 56.9,
+              "rom_pct": 81.0,
+              "reached_target": false,
+              "hold_s": 1.67,
+              "form_score": 91.5,
+              "components": {
+                "rom": 0.81,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.1,
+                "trunk_motion": 9.7
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 8
+            },
+            {
+              "counted": true,
+              "t_start_s": 165.7,
+              "t_end_s": 169.0,
+              "duration_s": 3.3,
+              "time_to_peak_s": 2.1,
+              "return_s": 1.2,
+              "start_angle_deg": 73.1,
+              "peak_angle_deg": 24.2,
+              "target_angle_deg": 0.0,
+              "rom_deg": 48.9,
+              "rom_pct": 73.1,
+              "reached_target": false,
+              "hold_s": 1.8,
+              "form_score": 87.9,
+              "components": {
+                "rom": 0.731,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.8,
+                "trunk_motion": 9.6
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 9
+            },
+            {
+              "counted": true,
+              "t_start_s": 171.13,
+              "t_end_s": 174.5,
+              "duration_s": 3.37,
+              "time_to_peak_s": 2.27,
+              "return_s": 1.1,
+              "start_angle_deg": 73.3,
+              "peak_angle_deg": 19.6,
+              "target_angle_deg": 0.0,
+              "rom_deg": 53.8,
+              "rom_pct": 78.3,
+              "reached_target": false,
+              "hold_s": 1.63,
+              "form_score": 90.2,
+              "components": {
+                "rom": 0.783,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 14.1,
+                "trunk_motion": 11.3
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 10
+            },
+            {
+              "counted": true,
+              "t_start_s": 176.47,
+              "t_end_s": 179.7,
+              "duration_s": 3.23,
+              "time_to_peak_s": 1.5,
+              "return_s": 1.73,
+              "start_angle_deg": 74.5,
+              "peak_angle_deg": 18.9,
+              "target_angle_deg": 0.0,
+              "rom_deg": 55.6,
+              "rom_pct": 79.1,
+              "reached_target": false,
+              "hold_s": 1.8,
+              "form_score": 90.6,
+              "components": {
+                "rom": 0.791,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 13.9,
+                "trunk_motion": 10.6
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 11
+            }
+          ]
+        },
+        {
+          "set_number": 3,
+          "target_reps": 12,
+          "completed_reps": 11,
+          "attempts_not_counted": 1,
+          "t_start_s": 226.83,
+          "t_end_s": 294.77,
+          "ended_by": "manual",
+          "reps": [
+            {
+              "counted": true,
+              "t_start_s": 228.57,
+              "t_end_s": 231.57,
+              "duration_s": 3.0,
+              "time_to_peak_s": 1.87,
+              "return_s": 1.13,
+              "start_angle_deg": 74.8,
+              "peak_angle_deg": 22.7,
+              "target_angle_deg": 0.0,
+              "rom_deg": 52.1,
+              "rom_pct": 74.8,
+              "reached_target": false,
+              "hold_s": 1.67,
+              "form_score": 88.7,
+              "components": {
+                "rom": 0.748,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.2,
+                "trunk_motion": 9.4
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 1
+            },
+            {
+              "counted": true,
+              "t_start_s": 233.37,
+              "t_end_s": 236.3,
+              "duration_s": 2.93,
+              "time_to_peak_s": 1.6,
+              "return_s": 1.33,
+              "start_angle_deg": 75.9,
+              "peak_angle_deg": 20.1,
+              "target_angle_deg": 0.0,
+              "rom_deg": 55.7,
+              "rom_pct": 77.6,
+              "reached_target": false,
+              "hold_s": 1.63,
+              "form_score": 89.9,
+              "components": {
+                "rom": 0.776,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.5,
+                "trunk_motion": 9.7
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 2
+            },
+            {
+              "counted": true,
+              "t_start_s": 238.27,
+              "t_end_s": 242.5,
+              "duration_s": 4.23,
+              "time_to_peak_s": 2.37,
+              "return_s": 1.87,
+              "start_angle_deg": 74.1,
+              "peak_angle_deg": 14.6,
+              "target_angle_deg": 0.0,
+              "rom_deg": 59.5,
+              "rom_pct": 83.8,
+              "reached_target": false,
+              "hold_s": 2.4,
+              "form_score": 92.7,
+              "components": {
+                "rom": 0.838,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.2,
+                "trunk_motion": 10.4
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 3
+            },
+            {
+              "counted": true,
+              "t_start_s": 244.63,
+              "t_end_s": 248.0,
+              "duration_s": 3.37,
+              "time_to_peak_s": 1.87,
+              "return_s": 1.5,
+              "start_angle_deg": 75.5,
+              "peak_angle_deg": 18.4,
+              "target_angle_deg": 0.0,
+              "rom_deg": 57.1,
+              "rom_pct": 79.6,
+              "reached_target": false,
+              "hold_s": 1.83,
+              "form_score": 90.1,
+              "components": {
+                "rom": 0.796,
+                "compensation": 0.972,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 15.2,
+                "trunk_motion": 12.7
+              },
+              "flags": [
+                "trunk_motion",
+                "short_of_target"
+              ],
+              "rep_index": 4
+            },
+            {
+              "counted": true,
+              "t_start_s": 249.97,
+              "t_end_s": 252.93,
+              "duration_s": 2.97,
+              "time_to_peak_s": 1.2,
+              "return_s": 1.77,
+              "start_angle_deg": 74.3,
+              "peak_angle_deg": 25.1,
+              "target_angle_deg": 0.0,
+              "rom_deg": 49.1,
+              "rom_pct": 72.1,
+              "reached_target": false,
+              "hold_s": 1.73,
+              "form_score": 87.4,
+              "components": {
+                "rom": 0.721,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 11.6,
+                "trunk_motion": 9.5
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 5
+            },
+            {
+              "counted": true,
+              "t_start_s": 255.03,
+              "t_end_s": 258.57,
+              "duration_s": 3.53,
+              "time_to_peak_s": 1.33,
+              "return_s": 2.2,
+              "start_angle_deg": 74.6,
+              "peak_angle_deg": 19.7,
+              "target_angle_deg": 0.0,
+              "rom_deg": 54.9,
+              "rom_pct": 78.1,
+              "reached_target": false,
+              "hold_s": 1.77,
+              "form_score": 90.1,
+              "components": {
+                "rom": 0.781,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 15.2,
+                "trunk_motion": 11.6
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 6
+            },
+            {
+              "counted": true,
+              "t_start_s": 260.83,
+              "t_end_s": 264.37,
+              "duration_s": 3.53,
+              "time_to_peak_s": 1.77,
+              "return_s": 1.77,
+              "start_angle_deg": 74.8,
+              "peak_angle_deg": 16.0,
+              "target_angle_deg": 0.0,
+              "rom_deg": 58.8,
+              "rom_pct": 82.2,
+              "reached_target": false,
+              "hold_s": 1.93,
+              "form_score": 92.0,
+              "components": {
+                "rom": 0.822,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 14.8,
+                "trunk_motion": 11.5
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 7
+            },
+            {
+              "counted": true,
+              "t_start_s": 266.5,
+              "t_end_s": 270.07,
+              "duration_s": 3.57,
+              "time_to_peak_s": 2.2,
+              "return_s": 1.37,
+              "start_angle_deg": 73.0,
+              "peak_angle_deg": 24.2,
+              "target_angle_deg": 0.0,
+              "rom_deg": 48.8,
+              "rom_pct": 73.1,
+              "reached_target": false,
+              "hold_s": 2.03,
+              "form_score": 87.9,
+              "components": {
+                "rom": 0.731,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.3,
+                "trunk_motion": 10.0
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 8
+            },
+            {
+              "counted": true,
+              "t_start_s": 272.0,
+              "t_end_s": 275.4,
+              "duration_s": 3.4,
+              "time_to_peak_s": 2.13,
+              "return_s": 1.27,
+              "start_angle_deg": 75.0,
+              "peak_angle_deg": 17.0,
+              "target_angle_deg": 0.0,
+              "rom_deg": 58.0,
+              "rom_pct": 81.1,
+              "reached_target": false,
+              "hold_s": 1.9,
+              "form_score": 91.5,
+              "components": {
+                "rom": 0.811,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.4,
+                "trunk_motion": 10.7
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 9
+            },
+            {
+              "counted": true,
+              "t_start_s": 277.37,
+              "t_end_s": 280.63,
+              "duration_s": 3.27,
+              "time_to_peak_s": 1.2,
+              "return_s": 2.07,
+              "start_angle_deg": 74.8,
+              "peak_angle_deg": 21.8,
+              "target_angle_deg": 0.0,
+              "rom_deg": 52.9,
+              "rom_pct": 75.7,
+              "reached_target": false,
+              "hold_s": 1.83,
+              "form_score": 89.1,
+              "components": {
+                "rom": 0.757,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 12.3,
+                "trunk_motion": 9.2
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 10
+            },
+            {
+              "counted": true,
+              "t_start_s": 282.83,
+              "t_end_s": 286.83,
+              "duration_s": 4.0,
+              "time_to_peak_s": 1.37,
+              "return_s": 2.63,
+              "start_angle_deg": 74.0,
+              "peak_angle_deg": 19.8,
+              "target_angle_deg": 0.0,
+              "rom_deg": 54.2,
+              "rom_pct": 78.0,
+              "reached_target": false,
+              "hold_s": 2.17,
+              "form_score": 90.1,
+              "components": {
+                "rom": 0.78,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 13.7,
+                "trunk_motion": 11.5
+              },
+              "flags": [
+                "short_of_target"
+              ],
+              "rep_index": 11
+            },
+            {
+              "counted": false,
+              "t_start_s": 289.27,
+              "t_end_s": 292.57,
+              "duration_s": 3.3,
+              "time_to_peak_s": 1.93,
+              "return_s": 1.37,
+              "start_angle_deg": 73.4,
+              "peak_angle_deg": 27.4,
+              "target_angle_deg": 0.0,
+              "rom_deg": 46.0,
+              "rom_pct": 69.6,
+              "reached_target": false,
+              "hold_s": 1.8,
+              "form_score": 86.3,
+              "components": {
+                "rom": 0.696,
+                "compensation": 1.0,
+                "tempo": 1.0,
+                "hold": 1.0
+              },
+              "excursions_deg": {
+                "upper_arm_drift": 9.6,
+                "trunk_motion": 7.7
+              },
+              "flags": [],
+              "rep_index": null
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "reps_planned": 36,
+        "reps_completed": 33,
+        "completion_pct": 91.7,
+        "sets_recorded": 3,
+        "reps_reached_target": 0,
+        "avg_peak_angle_deg": 20.4,
+        "best_peak_angle_deg": 14.2,
+        "avg_rom_pct": 77.4,
+        "avg_form_score": 89.7,
+        "min_form_score": 86.5,
+        "avg_rep_duration_s": 3.43,
+        "avg_hold_s": 1.88,
+        "flag_counts": {
+          "short_of_target": 33,
+          "trunk_motion": 4
+        }
+      },
+      "tracking": {
+        "frames": 6124,
+        "valid_frames": 6114,
+        "valid_pct": 99.8,
+        "camera_view_mismatch_pct": 0.0,
+        "side_used": "right"
+      },
+      "patient_report": {
+        "pain_0_10": 5,
+        "effort_0_10": 5,
+        "note": null
+      },
+      "angle_trace": {
+        "hz": 5,
+        "unit": "deg",
+        "samples": [
+          [
+            0.0,
+            91.1
+          ],
+          [
+            0.23,
+            89.3
+          ],
+          [
+            0.47,
+            89.7
+          ],
+          [
+            0.67,
+            88.6
+          ],
+          [
+            0.9,
+            83.9
+          ],
+          [
+            1.1,
+            76.5
+          ],
+          [
+            1.3,
+            67.5
+          ],
+          [
+            1.5,
+            55.5
+          ],
+          [
+            1.7,
+            44.1
+          ],
+          [
+            1.9,
+            33.9
+          ],
+          [
+            2.13,
+            25.7
+          ],
+          [
+            2.37,
+            20.1
+          ],
+          [
+            2.6,
+            19.8
+          ],
+          [
+            2.83,
+            18.3
+          ],
+          [
+            3.07,
+            19.0
+          ],
+          [
+            3.3,
+            19.1
+          ],
+          [
+            3.53,
+            19.1
+          ],
+          [
+            3.77,
+            18.2
+          ],
+          [
+            4.0,
+            22.2
+          ],
+          [
+            4.23,
+            30.1
+          ],
+          [
+            4.47,
+            41.4
+          ],
+          [
+            4.7,
+            52.9
+          ],
+          [
+            4.93,
+            64.2
+          ],
+          [
+            5.17,
+            76.3
+          ],
+          [
+            5.4,
+            85.3
+          ],
+          [
+            5.63,
+            88.8
+          ],
+          [
+            5.87,
+            89.6
+          ],
+          [
+            6.1,
+            90.5
+          ],
+          [
+            6.33,
+            90.2
+          ],
+          [
+            6.57,
+            89.7
+          ],
+          [
+            6.8,
+            84.1
+          ],
+          [
+            7.03,
+            75.8
+          ],
+          [
+            7.27,
+            65.3
+          ],
+          [
+            7.5,
+            52.4
+          ],
+          [
+            7.73,
+            39.2
+          ],
+          [
+            7.97,
+            29.6
+          ],
+          [
+            8.17,
+            23.9
+          ],
+          [
+            8.37,
+            21.0
+          ],
+          [
+            8.57,
+            21.0
+          ],
+          [
+            8.77,
+            20.6
+          ],
+          [
+            8.97,
+            21.3
+          ],
+          [
+            9.17,
+            21.8
+          ],
+          [
+            9.37,
+            21.5
+          ],
+          [
+            9.57,
+            22.3
+          ],
+          [
+            9.77,
+            20.6
+          ],
+          [
+            9.97,
+            21.6
+          ],
+          [
+            10.17,
+            25.0
+          ],
+          [
+            10.37,
+            32.1
+          ],
+          [
+            10.57,
+            43.1
+          ],
+          [
+            10.77,
+            55.2
+          ],
+          [
+            10.97,
+            67.4
+          ],
+          [
+            11.17,
+            77.9
+          ],
+          [
+            11.37,
+            86.1
+          ],
+          [
+            11.57,
+            89.4
+          ],
+          [
+            11.77,
+            90.1
+          ],
+          [
+            11.97,
+            89.3
+          ],
+          [
+            12.17,
+            89.5
+          ],
+          [
+            12.37,
+            89.6
+          ],
+          [
+            12.57,
+            87.0
+          ],
+          [
+            12.77,
+            81.2
+          ],
+          [
+            12.97,
+            74.0
+          ],
+          [
+            13.17,
+            63.3
+          ],
+          [
+            13.37,
+            52.4
+          ],
+          [
+            13.57,
+            44.4
+          ],
+          [
+            13.77,
+            33.8
+          ],
+          [
+            13.97,
+            27.5
+          ],
+          [
+            14.17,
+            26.2
+          ],
+          [
+            14.37,
+            25.4
+          ],
+          [
+            14.57,
+            25.6
+          ],
+          [
+            14.77,
+            24.7
+          ],
+          [
+            14.97,
+            24.5
+          ],
+          [
+            15.17,
+            24.5
+          ],
+          [
+            15.37,
+            25.5
+          ],
+          [
+            15.57,
+            24.7
+          ],
+          [
+            15.77,
+            29.5
+          ],
+          [
+            15.97,
+            36.6
+          ],
+          [
+            16.17,
+            47.1
+          ],
+          [
+            16.37,
+            60.7
+          ],
+          [
+            16.57,
+            73.2
+          ],
+          [
+            16.77,
+            81.7
+          ],
+          [
+            16.97,
+            88.4
+          ],
+          [
+            17.17,
+            89.8
+          ],
+          [
+            17.37,
+            89.2
+          ],
+          [
+            17.57,
+            90.4
+          ],
+          [
+            17.77,
+            90.3
+          ],
+          [
+            17.97,
+            88.9
+          ],
+          [
+            18.17,
+            84.5
+          ],
+          [
+            18.37,
+            76.0
+          ],
+          [
+            18.57,
+            67.6
+          ],
+          [
+            18.77,
+            58.2
+          ],
+          [
+            18.97,
+            46.6
+          ],
+          [
+            19.17,
+            37.1
+          ],
+          [
+            19.37,
+            31.9
+          ],
+          [
+            19.57,
+            29.7
+          ],
+          [
+            19.77,
+            28.9
+          ],
+          [
+            19.97,
+            29.3
+          ],
+          [
+            20.17,
+            28.8
+          ],
+          [
+            20.37,
+            28.6
+          ],
+          [
+            20.57,
+            28.9
+          ],
+          [
+            20.77,
+            27.9
+          ],
+          [
+            20.97,
+            27.9
+          ],
+          [
+            21.17,
+            30.7
+          ],
+          [
+            21.37,
+            36.6
+          ],
+          [
+            21.57,
+            46.5
+          ],
+          [
+            21.77,
+            58.9
+          ],
+          [
+            21.97,
+            70.8
+          ],
+          [
+            22.17,
+            80.7
+          ],
+          [
+            22.37,
+            87.0
+          ],
+          [
+            22.57,
+            90.1
+          ],
+          [
+            22.77,
+            90.4
+          ],
+          [
+            22.97,
+            91.1
+          ],
+          [
+            23.17,
+            90.5
+          ],
+          [
+            23.37,
+            89.2
+          ],
+          [
+            23.57,
+            85.8
+          ],
+          [
+            23.77,
+            77.1
+          ],
+          [
+            23.97,
+            65.1
+          ],
+          [
+            24.17,
+            54.0
+          ],
+          [
+            24.37,
+            43.2
+          ],
+          [
+            24.57,
+            32.8
+          ],
+          [
+            24.77,
+            24.5
+          ],
+          [
+            24.97,
+            19.6
+          ],
+          [
+            25.17,
+            18.8
+          ],
+          [
+            25.37,
+            18.1
+          ],
+          [
+            25.57,
+            17.6
+          ],
+          [
+            25.77,
+            18.1
+          ],
+          [
+            25.97,
+            18.5
+          ],
+          [
+            26.17,
+            17.9
+          ],
+          [
+            26.37,
+            19.3
+          ],
+          [
+            26.57,
+            22.4
+          ],
+          [
+            26.77,
+            30.8
+          ],
+          [
+            26.97,
+            42.2
+          ],
+          [
+            27.17,
+            56.4
+          ],
+          [
+            27.37,
+            69.8
+          ],
+          [
+            27.57,
+            79.9
+          ],
+          [
+            27.77,
+            87.0
+          ],
+          [
+            27.97,
+            89.2
+          ],
+          [
+            28.17,
+            89.4
+          ],
+          [
+            28.37,
+            90.4
+          ],
+          [
+            28.57,
+            90.4
+          ],
+          [
+            28.77,
+            88.4
+          ],
+          [
+            28.97,
+            80.8
+          ],
+          [
+            29.17,
+            69.0
+          ],
+          [
+            29.37,
+            55.6
+          ],
+          [
+            29.57,
+            39.7
+          ],
+          [
+            29.77,
+            28.5
+          ],
+          [
+            29.97,
+            22.9
+          ],
+          [
+            30.17,
+            22.6
+          ],
+          [
+            30.37,
+            22.4
+          ],
+          [
+            30.57,
+            20.6
+          ],
+          [
+            30.77,
+            22.0
+          ],
+          [
+            30.97,
+            24.0
+          ],
+          [
+            31.17,
+            30.2
+          ],
+          [
+            31.37,
+            40.5
+          ],
+          [
+            31.57,
+            51.6
+          ],
+          [
+            31.77,
+            63.6
+          ],
+          [
+            31.97,
+            75.3
+          ],
+          [
+            32.2,
+            84.5
+          ],
+          [
+            32.43,
+            89.8
+          ],
+          [
+            32.67,
+            89.9
+          ],
+          [
+            32.9,
+            89.9
+          ],
+          [
+            33.13,
+            89.6
+          ],
+          [
+            33.37,
+            88.2
+          ],
+          [
+            33.6,
+            80.7
+          ],
+          [
+            33.83,
+            70.1
+          ],
+          [
+            34.07,
+            58.3
+          ],
+          [
+            34.3,
+            42.6
+          ],
+          [
+            34.53,
+            32.7
+          ],
+          [
+            34.77,
+            24.6
+          ],
+          [
+            35.0,
+            21.3
+          ],
+          [
+            35.23,
+            22.2
+          ],
+          [
+            35.47,
+            20.8
+          ],
+          [
+            35.7,
+            20.9
+          ],
+          [
+            35.93,
+            22.1
+          ],
+          [
+            36.17,
+            24.9
+          ],
+          [
+            36.4,
+            32.2
+          ],
+          [
+            36.63,
+            39.9
+          ],
+          [
+            36.87,
+            49.8
+          ],
+          [
+            37.1,
+            61.0
+          ],
+          [
+            37.33,
+            70.3
+          ],
+          [
+            37.57,
+            78.3
+          ],
+          [
+            37.8,
+            85.5
+          ],
+          [
+            38.03,
+            89.1
+          ],
+          [
+            38.27,
+            89.8
+          ],
+          [
+            38.5,
+            90.2
+          ],
+          [
+            38.73,
+            89.7
+          ],
+          [
+            38.97,
+            89.5
+          ],
+          [
+            39.2,
+            83.8
+          ],
+          [
+            39.43,
+            71.9
+          ],
+          [
+            39.67,
+            56.5
+          ],
+          [
+            39.9,
+            41.9
+          ],
+          [
+            40.13,
+            29.5
+          ],
+          [
+            40.37,
+            22.7
+          ],
+          [
+            40.6,
+            21.2
+          ],
+          [
+            40.83,
+            20.5
+          ],
+          [
+            41.07,
+            20.4
+          ],
+          [
+            41.3,
+            20.3
+          ],
+          [
+            41.53,
+            21.1
+          ],
+          [
+            41.77,
+            21.4
+          ],
+          [
+            42.0,
+            24.5
+          ],
+          [
+            42.23,
+            30.3
+          ],
+          [
+            42.47,
+            39.5
+          ],
+          [
+            42.7,
+            50.0
+          ],
+          [
+            42.93,
+            61.1
+          ],
+          [
+            43.17,
+            70.5
+          ],
+          [
+            43.4,
+            79.3
+          ],
+          [
+            43.63,
+            85.6
+          ],
+          [
+            43.87,
+            89.7
+          ],
+          [
+            44.1,
+            90.9
+          ],
+          [
+            44.33,
+            90.7
+          ],
+          [
+            44.57,
+            90.0
+          ],
+          [
+            44.8,
+            88.6
+          ],
+          [
+            45.03,
+            82.0
+          ],
+          [
+            45.27,
+            68.8
+          ],
+          [
+            45.5,
+            54.0
+          ],
+          [
+            45.73,
+            39.6
+          ],
+          [
+            45.97,
+            27.6
+          ],
+          [
+            46.2,
+            21.1
+          ],
+          [
+            46.43,
+            20.3
+          ],
+          [
+            46.67,
+            19.5
+          ],
+          [
+            46.9,
+            20.5
+          ],
+          [
+            47.13,
+            19.2
+          ],
+          [
+            47.37,
+            19.9
+          ],
+          [
+            47.6,
+            25.1
+          ],
+          [
+            47.83,
+            32.5
+          ],
+          [
+            48.07,
+            43.1
+          ],
+          [
+            48.3,
+            55.3
+          ],
+          [
+            48.53,
+            66.0
+          ],
+          [
+            48.77,
+            78.1
+          ],
+          [
+            49.0,
+            85.6
+          ],
+          [
+            49.23,
+            89.0
+          ],
+          [
+            49.47,
+            90.1
+          ],
+          [
+            49.7,
+            91.1
+          ],
+          [
+            49.93,
+            90.6
+          ],
+          [
+            50.17,
+            88.0
+          ],
+          [
+            50.4,
+            82.5
+          ],
+          [
+            50.63,
+            73.0
+          ],
+          [
+            50.87,
+            61.0
+          ],
+          [
+            51.1,
+            48.3
+          ],
+          [
+            51.33,
+            37.2
+          ],
+          [
+            51.57,
+            31.0
+          ],
+          [
+            51.8,
+            29.0
+          ],
+          [
+            52.03,
+            29.1
+          ],
+          [
+            52.27,
+            29.3
+          ],
+          [
+            52.5,
+            27.6
+          ],
+          [
+            52.73,
+            28.3
+          ],
+          [
+            52.97,
+            28.9
+          ],
+          [
+            53.2,
+            33.9
+          ],
+          [
+            53.43,
+            42.5
+          ],
+          [
+            53.67,
+            55.8
+          ],
+          [
+            53.9,
+            68.3
+          ],
+          [
+            54.13,
+            79.3
+          ],
+          [
+            54.37,
+            86.4
+          ],
+          [
+            54.6,
+            89.7
+          ],
+          [
+            54.83,
+            89.7
+          ],
+          [
+            55.07,
+            90.4
+          ],
+          [
+            55.3,
+            89.7
+          ],
+          [
+            55.53,
+            86.0
+          ],
+          [
+            55.77,
+            75.7
+          ],
+          [
+            56.0,
+            61.7
+          ],
+          [
+            56.23,
+            45.0
+          ],
+          [
+            56.47,
+            31.3
+          ],
+          [
+            56.7,
+            21.8
+          ],
+          [
+            56.93,
+            19.5
+          ],
+          [
+            57.17,
+            18.4
+          ],
+          [
+            57.4,
+            18.7
+          ],
+          [
+            57.63,
+            19.3
+          ],
+          [
+            57.87,
+            19.3
+          ],
+          [
+            58.1,
+            24.4
+          ],
+          [
+            58.33,
+            32.8
+          ],
+          [
+            58.57,
+            44.7
+          ],
+          [
+            58.8,
+            58.3
+          ],
+          [
+            59.03,
+            71.2
+          ],
+          [
+            59.27,
+            80.4
+          ],
+          [
+            59.5,
+            87.3
+          ],
+          [
+            59.73,
+            89.5
+          ],
+          [
+            59.97,
+            89.8
+          ],
+          [
+            60.2,
+            89.2
+          ],
+          [
+            60.43,
+            89.6
+          ],
+          [
+            60.67,
+            86.4
+          ],
+          [
+            60.9,
+            79.7
+          ],
+          [
+            61.13,
+            68.4
+          ],
+          [
+            61.37,
+            54.5
+          ],
+          [
+            61.6,
+            42.1
+          ],
+          [
+            61.83,
+            32.2
+          ],
+          [
+            62.07,
+            24.4
+          ],
+          [
+            62.3,
+            22.0
+          ],
+          [
+            62.53,
+            21.5
+          ],
+          [
+            62.77,
+            22.5
+          ],
+          [
+            63.0,
+            21.5
+          ],
+          [
+            63.23,
+            21.9
+          ],
+          [
+            63.47,
+            23.5
+          ],
+          [
+            63.7,
+            27.0
+          ],
+          [
+            63.93,
+            34.0
+          ],
+          [
+            64.13,
+            42.2
+          ],
+          [
+            64.37,
+            52.1
+          ],
+          [
+            64.6,
+            62.7
+          ],
+          [
+            64.83,
+            73.0
+          ],
+          [
+            65.07,
+            80.5
+          ],
+          [
+            65.3,
+            86.6
+          ],
+          [
+            65.53,
+            90.0
+          ],
+          [
+            65.77,
+            89.6
+          ],
+          [
+            66.0,
+            89.9
+          ],
+          [
+            66.23,
+            90.1
+          ],
+          [
+            66.47,
+            90.3
+          ],
+          [
+            66.7,
+            89.5
+          ],
+          [
+            66.93,
+            89.7
+          ],
+          [
+            112.6,
+            91.4
+          ],
+          [
+            112.83,
+            90.5
+          ],
+          [
+            113.07,
+            90.0
+          ],
+          [
+            113.3,
+            88.2
+          ],
+          [
+            113.53,
+            80.3
+          ],
+          [
+            113.77,
+            65.9
+          ],
+          [
+            114.0,
+            51.6
+          ],
+          [
+            114.23,
+            38.4
+          ],
+          [
+            114.47,
+            30.1
+          ],
+          [
+            114.7,
+            28.5
+          ],
+          [
+            114.93,
+            27.6
+          ],
+          [
+            115.17,
+            27.3
+          ],
+          [
+            115.4,
+            27.6
+          ],
+          [
+            115.63,
+            27.8
+          ],
+          [
+            115.87,
+            33.9
+          ],
+          [
+            116.1,
+            44.6
+          ],
+          [
+            116.33,
+            58.2
+          ],
+          [
+            116.57,
+            73.3
+          ],
+          [
+            116.8,
+            84.2
+          ],
+          [
+            117.03,
+            88.8
+          ],
+          [
+            117.27,
+            89.7
+          ],
+          [
+            117.5,
+            90.3
+          ],
+          [
+            117.73,
+            90.5
+          ],
+          [
+            117.97,
+            87.1
+          ],
+          [
+            118.2,
+            79.3
+          ],
+          [
+            118.43,
+            65.8
+          ],
+          [
+            118.67,
+            49.8
+          ],
+          [
+            118.9,
+            34.4
+          ],
+          [
+            119.13,
+            22.9
+          ],
+          [
+            119.37,
+            15.9
+          ],
+          [
+            119.6,
+            16.2
+          ],
+          [
+            119.83,
+            15.2
+          ],
+          [
+            120.07,
+            15.0
+          ],
+          [
+            120.3,
+            14.3
+          ],
+          [
+            120.53,
+            14.3
+          ],
+          [
+            120.77,
+            17.7
+          ],
+          [
+            121.0,
+            22.7
+          ],
+          [
+            121.23,
+            31.7
+          ],
+          [
+            121.47,
+            43.6
+          ],
+          [
+            121.7,
+            57.0
+          ],
+          [
+            121.93,
+            69.6
+          ],
+          [
+            122.17,
+            79.4
+          ],
+          [
+            122.4,
+            86.3
+          ],
+          [
+            122.63,
+            89.8
+          ],
+          [
+            122.87,
+            90.4
+          ],
+          [
+            123.1,
+            90.1
+          ],
+          [
+            123.33,
+            89.1
+          ],
+          [
+            123.57,
+            87.1
+          ],
+          [
+            123.8,
+            77.7
+          ],
+          [
+            124.03,
+            64.2
+          ],
+          [
+            124.27,
+            50.0
+          ],
+          [
+            124.5,
+            36.2
+          ],
+          [
+            124.73,
+            26.4
+          ],
+          [
+            124.97,
+            21.5
+          ],
+          [
+            125.2,
+            22.2
+          ],
+          [
+            125.43,
+            22.4
+          ],
+          [
+            125.67,
+            21.6
+          ],
+          [
+            125.9,
+            21.9
+          ],
+          [
+            126.13,
+            23.0
+          ],
+          [
+            126.37,
+            32.3
+          ],
+          [
+            126.6,
+            45.9
+          ],
+          [
+            126.83,
+            61.2
+          ],
+          [
+            127.07,
+            77.2
+          ],
+          [
+            127.3,
+            87.1
+          ],
+          [
+            127.53,
+            89.9
+          ],
+          [
+            127.77,
+            89.7
+          ],
+          [
+            128.0,
+            90.6
+          ],
+          [
+            128.2,
+            89.1
+          ],
+          [
+            128.4,
+            87.4
+          ],
+          [
+            128.6,
+            82.8
+          ],
+          [
+            128.8,
+            75.9
+          ],
+          [
+            129.0,
+            65.4
+          ],
+          [
+            129.2,
+            55.8
+          ],
+          [
+            129.4,
+            46.2
+          ],
+          [
+            129.6,
+            37.8
+          ],
+          [
+            129.8,
+            30.5
+          ],
+          [
+            130.0,
+            26.3
+          ],
+          [
+            130.2,
+            25.2
+          ],
+          [
+            130.4,
+            25.2
+          ],
+          [
+            130.6,
+            24.6
+          ],
+          [
+            130.8,
+            24.0
+          ],
+          [
+            131.0,
+            24.1
+          ],
+          [
+            131.2,
+            25.0
+          ],
+          [
+            131.4,
+            24.8
+          ],
+          [
+            131.6,
+            24.7
+          ],
+          [
+            131.8,
+            29.6
+          ],
+          [
+            132.0,
+            36.0
+          ],
+          [
+            132.2,
+            45.8
+          ],
+          [
+            132.4,
+            57.2
+          ],
+          [
+            132.6,
+            69.0
+          ],
+          [
+            132.8,
+            78.4
+          ],
+          [
+            133.0,
+            86.2
+          ],
+          [
+            133.2,
+            89.8
+          ],
+          [
+            133.4,
+            91.1
+          ],
+          [
+            133.6,
+            90.5
+          ],
+          [
+            133.8,
+            90.0
+          ],
+          [
+            134.0,
+            89.4
+          ],
+          [
+            134.2,
+            88.2
+          ],
+          [
+            134.4,
+            84.4
+          ],
+          [
+            134.6,
+            77.8
+          ],
+          [
+            134.8,
+            69.8
+          ],
+          [
+            135.0,
+            60.7
+          ],
+          [
+            135.2,
+            51.5
+          ],
+          [
+            135.4,
+            44.4
+          ],
+          [
+            135.6,
+            37.1
+          ],
+          [
+            135.8,
+            31.0
+          ],
+          [
+            136.0,
+            29.3
+          ],
+          [
+            136.2,
+            28.1
+          ],
+          [
+            136.4,
+            28.8
+          ],
+          [
+            136.6,
+            28.5
+          ],
+          [
+            136.8,
+            27.9
+          ],
+          [
+            137.0,
+            28.8
+          ],
+          [
+            137.2,
+            28.6
+          ],
+          [
+            137.4,
+            28.6
+          ],
+          [
+            137.6,
+            29.6
+          ],
+          [
+            137.8,
+            32.3
+          ],
+          [
+            138.0,
+            34.8
+          ],
+          [
+            138.2,
+            42.7
+          ],
+          [
+            138.4,
+            51.7
+          ],
+          [
+            138.6,
+            62.8
+          ],
+          [
+            138.8,
+            71.7
+          ],
+          [
+            139.0,
+            80.0
+          ],
+          [
+            139.2,
+            86.3
+          ],
+          [
+            139.4,
+            89.2
+          ],
+          [
+            139.6,
+            89.9
+          ],
+          [
+            139.8,
+            90.3
+          ],
+          [
+            140.0,
+            90.7
+          ],
+          [
+            140.2,
+            89.3
+          ],
+          [
+            140.4,
+            88.5
+          ],
+          [
+            140.6,
+            84.1
+          ],
+          [
+            140.8,
+            76.8
+          ],
+          [
+            141.0,
+            68.8
+          ],
+          [
+            141.2,
+            58.7
+          ],
+          [
+            141.4,
+            48.8
+          ],
+          [
+            141.6,
+            38.3
+          ],
+          [
+            141.8,
+            30.6
+          ],
+          [
+            142.0,
+            24.7
+          ],
+          [
+            142.2,
+            22.4
+          ],
+          [
+            142.4,
+            21.5
+          ],
+          [
+            142.6,
+            21.3
+          ],
+          [
+            142.8,
+            21.5
+          ],
+          [
+            143.0,
+            21.9
+          ],
+          [
+            143.2,
+            21.4
+          ],
+          [
+            143.4,
+            22.4
+          ],
+          [
+            143.6,
+            21.2
+          ],
+          [
+            143.8,
+            21.5
+          ],
+          [
+            144.0,
+            25.7
+          ],
+          [
+            144.2,
+            28.8
+          ],
+          [
+            144.4,
+            34.5
+          ],
+          [
+            144.6,
+            44.8
+          ],
+          [
+            144.8,
+            54.3
+          ],
+          [
+            145.0,
+            63.7
+          ],
+          [
+            145.2,
+            73.1
+          ],
+          [
+            145.4,
+            81.5
+          ],
+          [
+            145.6,
+            87.3
+          ],
+          [
+            145.8,
+            90.0
+          ],
+          [
+            146.0,
+            90.1
+          ],
+          [
+            146.2,
+            90.0
+          ],
+          [
+            146.4,
+            90.1
+          ],
+          [
+            146.6,
+            90.0
+          ],
+          [
+            146.8,
+            87.4
+          ],
+          [
+            147.0,
+            82.3
+          ],
+          [
+            147.2,
+            74.3
+          ],
+          [
+            147.4,
+            63.4
+          ],
+          [
+            147.6,
+            52.1
+          ],
+          [
+            147.8,
+            41.1
+          ],
+          [
+            148.0,
+            32.2
+          ],
+          [
+            148.2,
+            25.5
+          ],
+          [
+            148.4,
+            21.6
+          ],
+          [
+            148.6,
+            21.1
+          ],
+          [
+            148.8,
+            20.3
+          ],
+          [
+            149.0,
+            20.9
+          ],
+          [
+            149.2,
+            19.8
+          ],
+          [
+            149.4,
+            21.1
+          ],
+          [
+            149.6,
+            23.3
+          ],
+          [
+            149.8,
+            27.2
+          ],
+          [
+            150.0,
+            34.0
+          ],
+          [
+            150.2,
+            41.9
+          ],
+          [
+            150.4,
+            51.9
+          ],
+          [
+            150.6,
+            60.5
+          ],
+          [
+            150.8,
+            70.5
+          ],
+          [
+            151.0,
+            78.0
+          ],
+          [
+            151.2,
+            84.2
+          ],
+          [
+            151.4,
+            88.4
+          ],
+          [
+            151.6,
+            90.0
+          ],
+          [
+            151.8,
+            90.8
+          ],
+          [
+            152.0,
+            89.7
+          ],
+          [
+            152.2,
+            89.6
+          ],
+          [
+            152.4,
+            89.8
+          ],
+          [
+            152.6,
+            86.8
+          ],
+          [
+            152.8,
+            82.3
+          ],
+          [
+            153.0,
+            74.8
+          ],
+          [
+            153.2,
+            66.4
+          ],
+          [
+            153.4,
+            55.5
+          ],
+          [
+            153.6,
+            47.8
+          ],
+          [
+            153.8,
+            39.3
+          ],
+          [
+            154.0,
+            32.8
+          ],
+          [
+            154.2,
+            27.1
+          ],
+          [
+            154.4,
+            24.7
+          ],
+          [
+            154.6,
+            23.5
+          ],
+          [
+            154.8,
+            23.2
+          ],
+          [
+            155.0,
+            22.6
+          ],
+          [
+            155.2,
+            22.4
+          ],
+          [
+            155.4,
+            23.3
+          ],
+          [
+            155.6,
+            23.3
+          ],
+          [
+            155.8,
+            23.4
+          ],
+          [
+            156.0,
+            23.2
+          ],
+          [
+            156.2,
+            24.2
+          ],
+          [
+            156.4,
+            28.5
+          ],
+          [
+            156.6,
+            33.8
+          ],
+          [
+            156.8,
+            44.7
+          ],
+          [
+            157.0,
+            52.3
+          ],
+          [
+            157.2,
+            62.5
+          ],
+          [
+            157.4,
+            71.3
+          ],
+          [
+            157.6,
+            79.2
+          ],
+          [
+            157.8,
+            85.5
+          ],
+          [
+            158.0,
+            88.8
+          ],
+          [
+            158.2,
+            89.8
+          ],
+          [
+            158.4,
+            90.2
+          ],
+          [
+            158.6,
+            90.3
+          ],
+          [
+            158.8,
+            90.2
+          ],
+          [
+            159.0,
+            89.2
+          ],
+          [
+            159.2,
+            84.6
+          ],
+          [
+            159.4,
+            78.2
+          ],
+          [
+            159.6,
+            71.1
+          ],
+          [
+            159.8,
+            60.1
+          ],
+          [
+            160.0,
+            50.4
+          ],
+          [
+            160.2,
+            40.7
+          ],
+          [
+            160.4,
+            31.2
+          ],
+          [
+            160.6,
+            25.0
+          ],
+          [
+            160.8,
+            20.3
+          ],
+          [
+            161.0,
+            19.0
+          ],
+          [
+            161.2,
+            17.9
+          ],
+          [
+            161.4,
+            19.1
+          ],
+          [
+            161.6,
+            18.2
+          ],
+          [
+            161.8,
+            18.0
+          ],
+          [
+            162.0,
+            19.5
+          ],
+          [
+            162.2,
+            22.8
+          ],
+          [
+            162.4,
+            30.5
+          ],
+          [
+            162.6,
+            36.6
+          ],
+          [
+            162.8,
+            46.4
+          ],
+          [
+            163.0,
+            56.1
+          ],
+          [
+            163.2,
+            66.0
+          ],
+          [
+            163.4,
+            75.2
+          ],
+          [
+            163.6,
+            81.9
+          ],
+          [
+            163.8,
+            87.2
+          ],
+          [
+            164.0,
+            89.4
+          ],
+          [
+            164.2,
+            89.7
+          ],
+          [
+            164.4,
+            90.0
+          ],
+          [
+            164.6,
+            88.9
+          ],
+          [
+            164.8,
+            89.3
+          ],
+          [
+            165.0,
+            88.3
+          ],
+          [
+            165.2,
+            85.1
+          ],
+          [
+            165.4,
+            79.6
+          ],
+          [
+            165.6,
+            72.9
+          ],
+          [
+            165.8,
+            64.4
+          ],
+          [
+            166.0,
+            56.2
+          ],
+          [
+            166.2,
+            47.3
+          ],
+          [
+            166.4,
+            40.0
+          ],
+          [
+            166.6,
+            32.4
+          ],
+          [
+            166.8,
+            28.0
+          ],
+          [
+            167.0,
+            25.5
+          ],
+          [
+            167.2,
+            25.6
+          ],
+          [
+            167.4,
+            24.8
+          ],
+          [
+            167.6,
+            25.7
+          ],
+          [
+            167.8,
+            24.2
+          ],
+          [
+            168.0,
+            24.5
+          ],
+          [
+            168.2,
+            26.3
+          ],
+          [
+            168.4,
+            31.9
+          ],
+          [
+            168.6,
+            41.0
+          ],
+          [
+            168.8,
+            54.6
+          ],
+          [
+            169.0,
+            68.9
+          ],
+          [
+            169.2,
+            80.5
+          ],
+          [
+            169.4,
+            88.5
+          ],
+          [
+            169.6,
+            90.1
+          ],
+          [
+            169.8,
+            90.4
+          ],
+          [
+            170.0,
+            89.7
+          ],
+          [
+            170.2,
+            90.9
+          ],
+          [
+            170.4,
+            89.3
+          ],
+          [
+            170.6,
+            85.7
+          ],
+          [
+            170.8,
+            81.5
+          ],
+          [
+            171.0,
+            73.8
+          ],
+          [
+            171.2,
+            66.5
+          ],
+          [
+            171.4,
+            56.4
+          ],
+          [
+            171.6,
+            46.6
+          ],
+          [
+            171.8,
+            38.4
+          ],
+          [
+            172.0,
+            31.9
+          ],
+          [
+            172.2,
+            26.6
+          ],
+          [
+            172.4,
+            21.9
+          ],
+          [
+            172.6,
+            21.0
+          ],
+          [
+            172.8,
+            21.1
+          ],
+          [
+            173.0,
+            21.1
+          ],
+          [
+            173.2,
+            21.1
+          ],
+          [
+            173.4,
+            19.6
+          ],
+          [
+            173.6,
+            21.1
+          ],
+          [
+            173.8,
+            28.6
+          ],
+          [
+            174.0,
+            36.9
+          ],
+          [
+            174.2,
+            48.9
+          ],
+          [
+            174.4,
+            60.9
+          ],
+          [
+            174.6,
+            73.9
+          ],
+          [
+            174.8,
+            83.4
+          ],
+          [
+            175.0,
+            88.3
+          ],
+          [
+            175.2,
+            90.1
+          ],
+          [
+            175.4,
+            90.4
+          ],
+          [
+            175.6,
+            89.9
+          ],
+          [
+            175.8,
+            89.5
+          ],
+          [
+            176.0,
+            87.3
+          ],
+          [
+            176.2,
+            80.8
+          ],
+          [
+            176.4,
+            71.9
+          ],
+          [
+            176.6,
+            58.6
+          ],
+          [
+            176.8,
+            46.9
+          ],
+          [
+            177.0,
+            34.8
+          ],
+          [
+            177.2,
+            26.4
+          ],
+          [
+            177.4,
+            19.9
+          ],
+          [
+            177.6,
+            19.4
+          ],
+          [
+            177.8,
+            19.8
+          ],
+          [
+            178.0,
+            19.3
+          ],
+          [
+            178.2,
+            20.3
+          ],
+          [
+            178.4,
+            20.0
+          ],
+          [
+            178.6,
+            19.9
+          ],
+          [
+            178.8,
+            21.9
+          ],
+          [
+            179.0,
+            28.6
+          ],
+          [
+            179.2,
+            39.0
+          ],
+          [
+            179.4,
+            49.9
+          ],
+          [
+            179.6,
+            63.0
+          ],
+          [
+            179.8,
+            73.4
+          ],
+          [
+            180.0,
+            83.1
+          ],
+          [
+            180.2,
+            88.2
+          ],
+          [
+            180.4,
+            89.1
+          ],
+          [
+            180.6,
+            89.3
+          ],
+          [
+            180.8,
+            89.9
+          ],
+          [
+            181.0,
+            89.9
+          ],
+          [
+            181.2,
+            90.3
+          ],
+          [
+            181.4,
+            90.4
+          ],
+          [
+            181.6,
+            89.3
+          ],
+          [
+            181.8,
+            89.8
+          ],
+          [
+            227.33,
+            90.6
+          ],
+          [
+            227.53,
+            89.3
+          ],
+          [
+            227.73,
+            90.1
+          ],
+          [
+            227.93,
+            88.5
+          ],
+          [
+            228.13,
+            86.2
+          ],
+          [
+            228.33,
+            80.1
+          ],
+          [
+            228.53,
+            70.4
+          ],
+          [
+            228.73,
+            59.8
+          ],
+          [
+            228.93,
+            48.8
+          ],
+          [
+            229.13,
+            37.9
+          ],
+          [
+            229.33,
+            30.5
+          ],
+          [
+            229.53,
+            24.4
+          ],
+          [
+            229.73,
+            23.4
+          ],
+          [
+            229.93,
+            23.6
+          ],
+          [
+            230.13,
+            23.3
+          ],
+          [
+            230.33,
+            23.6
+          ],
+          [
+            230.53,
+            23.7
+          ],
+          [
+            230.73,
+            24.2
+          ],
+          [
+            230.93,
+            28.1
+          ],
+          [
+            231.13,
+            39.7
+          ],
+          [
+            231.33,
+            53.0
+          ],
+          [
+            231.53,
+            67.1
+          ],
+          [
+            231.73,
+            79.6
+          ],
+          [
+            231.93,
+            86.9
+          ],
+          [
+            232.13,
+            89.5
+          ],
+          [
+            232.33,
+            89.9
+          ],
+          [
+            232.53,
+            91.1
+          ],
+          [
+            232.73,
+            90.4
+          ],
+          [
+            232.93,
+            88.2
+          ],
+          [
+            233.13,
+            81.0
+          ],
+          [
+            233.33,
+            71.3
+          ],
+          [
+            233.53,
+            57.6
+          ],
+          [
+            233.73,
+            44.2
+          ],
+          [
+            233.93,
+            33.1
+          ],
+          [
+            234.13,
+            25.2
+          ],
+          [
+            234.33,
+            20.8
+          ],
+          [
+            234.53,
+            21.5
+          ],
+          [
+            234.73,
+            21.8
+          ],
+          [
+            234.93,
+            20.9
+          ],
+          [
+            235.13,
+            21.4
+          ],
+          [
+            235.33,
+            21.1
+          ],
+          [
+            235.53,
+            22.7
+          ],
+          [
+            235.73,
+            30.6
+          ],
+          [
+            235.93,
+            42.1
+          ],
+          [
+            236.13,
+            55.9
+          ],
+          [
+            236.33,
+            71.5
+          ],
+          [
+            236.53,
+            82.0
+          ],
+          [
+            236.73,
+            87.8
+          ],
+          [
+            236.93,
+            88.7
+          ],
+          [
+            237.13,
+            89.6
+          ],
+          [
+            237.33,
+            89.8
+          ],
+          [
+            237.53,
+            89.7
+          ],
+          [
+            237.73,
+            87.5
+          ],
+          [
+            237.93,
+            82.9
+          ],
+          [
+            238.13,
+            74.5
+          ],
+          [
+            238.33,
+            66.1
+          ],
+          [
+            238.53,
+            55.6
+          ],
+          [
+            238.73,
+            42.6
+          ],
+          [
+            238.93,
+            33.4
+          ],
+          [
+            239.13,
+            23.3
+          ],
+          [
+            239.33,
+            18.3
+          ],
+          [
+            239.53,
+            16.1
+          ],
+          [
+            239.73,
+            15.4
+          ],
+          [
+            239.93,
+            16.0
+          ],
+          [
+            240.13,
+            16.5
+          ],
+          [
+            240.33,
+            16.8
+          ],
+          [
+            240.53,
+            15.5
+          ],
+          [
+            240.73,
+            15.7
+          ],
+          [
+            240.93,
+            16.6
+          ],
+          [
+            241.13,
+            15.9
+          ],
+          [
+            241.33,
+            17.5
+          ],
+          [
+            241.53,
+            22.4
+          ],
+          [
+            241.73,
+            29.2
+          ],
+          [
+            241.93,
+            39.2
+          ],
+          [
+            242.13,
+            48.9
+          ],
+          [
+            242.33,
+            62.1
+          ],
+          [
+            242.53,
+            70.2
+          ],
+          [
+            242.73,
+            78.4
+          ],
+          [
+            242.93,
+            84.9
+          ],
+          [
+            243.13,
+            89.4
+          ],
+          [
+            243.33,
+            89.2
+          ],
+          [
+            243.53,
+            90.2
+          ],
+          [
+            243.73,
+            89.9
+          ],
+          [
+            243.93,
+            89.6
+          ],
+          [
+            244.13,
+            88.4
+          ],
+          [
+            244.33,
+            83.5
+          ],
+          [
+            244.53,
+            74.7
+          ],
+          [
+            244.73,
+            62.3
+          ],
+          [
+            244.93,
+            50.8
+          ],
+          [
+            245.13,
+            38.9
+          ],
+          [
+            245.33,
+            29.0
+          ],
+          [
+            245.53,
+            22.5
+          ],
+          [
+            245.73,
+            19.3
+          ],
+          [
+            245.93,
+            19.7
+          ],
+          [
+            246.13,
+            19.3
+          ],
+          [
+            246.33,
+            19.6
+          ],
+          [
+            246.53,
+            18.8
+          ],
+          [
+            246.73,
+            20.3
+          ],
+          [
+            246.93,
+            19.6
+          ],
+          [
+            247.13,
+            23.3
+          ],
+          [
+            247.33,
+            31.1
+          ],
+          [
+            247.53,
+            41.2
+          ],
+          [
+            247.73,
+            53.5
+          ],
+          [
+            247.93,
+            64.6
+          ],
+          [
+            248.13,
+            76.1
+          ],
+          [
+            248.33,
+            84.6
+          ],
+          [
+            248.53,
+            88.8
+          ],
+          [
+            248.73,
+            89.1
+          ],
+          [
+            248.93,
+            90.4
+          ],
+          [
+            249.13,
+            90.8
+          ],
+          [
+            249.33,
+            90.7
+          ],
+          [
+            249.53,
+            87.5
+          ],
+          [
+            249.73,
+            79.8
+          ],
+          [
+            249.93,
+            70.6
+          ],
+          [
+            250.13,
+            56.3
+          ],
+          [
+            250.33,
+            45.3
+          ],
+          [
+            250.53,
+            34.1
+          ],
+          [
+            250.73,
+            28.4
+          ],
+          [
+            250.93,
+            26.5
+          ],
+          [
+            251.13,
+            25.2
+          ],
+          [
+            251.33,
+            26.5
+          ],
+          [
+            251.53,
+            25.9
+          ],
+          [
+            251.73,
+            26.7
+          ],
+          [
+            251.93,
+            27.4
+          ],
+          [
+            252.13,
+            30.2
+          ],
+          [
+            252.33,
+            37.0
+          ],
+          [
+            252.53,
+            46.6
+          ],
+          [
+            252.73,
+            57.4
+          ],
+          [
+            252.93,
+            69.5
+          ],
+          [
+            253.13,
+            78.8
+          ],
+          [
+            253.33,
+            86.7
+          ],
+          [
+            253.53,
+            89.4
+          ],
+          [
+            253.73,
+            90.4
+          ],
+          [
+            253.93,
+            89.9
+          ],
+          [
+            254.13,
+            89.7
+          ],
+          [
+            254.33,
+            90.3
+          ],
+          [
+            254.53,
+            87.3
+          ],
+          [
+            254.73,
+            81.6
+          ],
+          [
+            254.93,
+            74.1
+          ],
+          [
+            255.13,
+            65.2
+          ],
+          [
+            255.33,
+            54.8
+          ],
+          [
+            255.53,
+            43.9
+          ],
+          [
+            255.73,
+            33.9
+          ],
+          [
+            255.93,
+            27.6
+          ],
+          [
+            256.13,
+            23.1
+          ],
+          [
+            256.33,
+            20.0
+          ],
+          [
+            256.53,
+            20.6
+          ],
+          [
+            256.73,
+            21.4
+          ],
+          [
+            256.93,
+            20.8
+          ],
+          [
+            257.13,
+            20.1
+          ],
+          [
+            257.33,
+            22.4
+          ],
+          [
+            257.53,
+            25.1
+          ],
+          [
+            257.73,
+            29.6
+          ],
+          [
+            257.93,
+            37.5
+          ],
+          [
+            258.13,
+            46.2
+          ],
+          [
+            258.33,
+            55.3
+          ],
+          [
+            258.53,
+            65.6
+          ],
+          [
+            258.73,
+            74.1
+          ],
+          [
+            258.93,
+            82.3
+          ],
+          [
+            259.13,
+            86.7
+          ],
+          [
+            259.33,
+            89.4
+          ],
+          [
+            259.53,
+            89.6
+          ],
+          [
+            259.73,
+            90.0
+          ],
+          [
+            259.93,
+            90.2
+          ],
+          [
+            260.13,
+            89.8
+          ],
+          [
+            260.33,
+            88.4
+          ],
+          [
+            260.53,
+            82.3
+          ],
+          [
+            260.73,
+            74.4
+          ],
+          [
+            260.93,
+            63.3
+          ],
+          [
+            261.13,
+            52.5
+          ],
+          [
+            261.33,
+            43.4
+          ],
+          [
+            261.53,
+            32.5
+          ],
+          [
+            261.73,
+            24.3
+          ],
+          [
+            261.93,
+            20.7
+          ],
+          [
+            262.13,
+            18.6
+          ],
+          [
+            262.33,
+            17.6
+          ],
+          [
+            262.53,
+            17.2
+          ],
+          [
+            262.73,
+            17.2
+          ],
+          [
+            262.93,
+            17.1
+          ],
+          [
+            263.13,
+            17.2
+          ],
+          [
+            263.33,
+            16.5
+          ],
+          [
+            263.53,
+            20.3
+          ],
+          [
+            263.73,
+            26.6
+          ],
+          [
+            263.93,
+            38.0
+          ],
+          [
+            264.13,
+            52.4
+          ],
+          [
+            264.33,
+            66.6
+          ],
+          [
+            264.53,
+            79.1
+          ],
+          [
+            264.73,
+            86.3
+          ],
+          [
+            264.93,
+            90.2
+          ],
+          [
+            265.13,
+            90.3
+          ],
+          [
+            265.33,
+            90.2
+          ],
+          [
+            265.53,
+            90.5
+          ],
+          [
+            265.73,
+            89.6
+          ],
+          [
+            265.93,
+            87.3
+          ],
+          [
+            266.13,
+            82.4
+          ],
+          [
+            266.33,
+            74.7
+          ],
+          [
+            266.53,
+            67.5
+          ],
+          [
+            266.73,
+            59.0
+          ],
+          [
+            266.93,
+            50.5
+          ],
+          [
+            267.13,
+            41.4
+          ],
+          [
+            267.33,
+            34.9
+          ],
+          [
+            267.53,
+            30.0
+          ],
+          [
+            267.73,
+            26.0
+          ],
+          [
+            267.93,
+            25.6
+          ],
+          [
+            268.13,
+            25.6
+          ],
+          [
+            268.33,
+            25.2
+          ],
+          [
+            268.53,
+            26.6
+          ],
+          [
+            268.73,
+            24.8
+          ],
+          [
+            268.93,
+            25.3
+          ],
+          [
+            269.13,
+            25.8
+          ],
+          [
+            269.33,
+            29.1
+          ],
+          [
+            269.53,
+            37.6
+          ],
+          [
+            269.73,
+            48.1
+          ],
+          [
+            269.93,
+            60.0
+          ],
+          [
+            270.13,
+            72.7
+          ],
+          [
+            270.33,
+            81.6
+          ],
+          [
+            270.53,
+            87.9
+          ],
+          [
+            270.73,
+            89.3
+          ],
+          [
+            270.93,
+            89.6
+          ],
+          [
+            271.13,
+            90.0
+          ],
+          [
+            271.33,
+            90.3
+          ],
+          [
+            271.53,
+            87.6
+          ],
+          [
+            271.73,
+            82.8
+          ],
+          [
+            271.93,
+            73.4
+          ],
+          [
+            272.13,
+            61.2
+          ],
+          [
+            272.33,
+            47.5
+          ],
+          [
+            272.53,
+            34.7
+          ],
+          [
+            272.73,
+            24.8
+          ],
+          [
+            272.93,
+            20.3
+          ],
+          [
+            273.13,
+            17.2
+          ],
+          [
+            273.33,
+            18.1
+          ],
+          [
+            273.53,
+            17.6
+          ],
+          [
+            273.73,
+            18.5
+          ],
+          [
+            273.93,
+            17.6
+          ],
+          [
+            274.13,
+            17.0
+          ],
+          [
+            274.33,
+            17.3
+          ],
+          [
+            274.53,
+            21.2
+          ],
+          [
+            274.73,
+            28.5
+          ],
+          [
+            274.93,
+            39.4
+          ],
+          [
+            275.13,
+            51.8
+          ],
+          [
+            275.33,
+            64.0
+          ],
+          [
+            275.53,
+            75.5
+          ],
+          [
+            275.73,
+            84.0
+          ],
+          [
+            275.93,
+            88.5
+          ],
+          [
+            276.13,
+            88.9
+          ],
+          [
+            276.33,
+            90.1
+          ],
+          [
+            276.53,
+            89.0
+          ],
+          [
+            276.73,
+            90.6
+          ],
+          [
+            276.93,
+            87.6
+          ],
+          [
+            277.13,
+            81.1
+          ],
+          [
+            277.33,
+            70.3
+          ],
+          [
+            277.53,
+            56.9
+          ],
+          [
+            277.73,
+            44.3
+          ],
+          [
+            277.93,
+            34.1
+          ],
+          [
+            278.13,
+            26.2
+          ],
+          [
+            278.33,
+            23.5
+          ],
+          [
+            278.53,
+            22.7
+          ],
+          [
+            278.73,
+            22.9
+          ],
+          [
+            278.93,
+            23.2
+          ],
+          [
+            279.13,
+            24.0
+          ],
+          [
+            279.33,
+            22.8
+          ],
+          [
+            279.53,
+            23.9
+          ],
+          [
+            279.73,
+            27.1
+          ],
+          [
+            279.93,
+            33.5
+          ],
+          [
+            280.13,
+            42.0
+          ],
+          [
+            280.33,
+            52.2
+          ],
+          [
+            280.53,
+            62.9
+          ],
+          [
+            280.73,
+            72.6
+          ],
+          [
+            280.93,
+            81.8
+          ],
+          [
+            281.13,
+            88.1
+          ],
+          [
+            281.33,
+            90.0
+          ],
+          [
+            281.53,
+            89.4
+          ],
+          [
+            281.73,
+            89.7
+          ],
+          [
+            281.93,
+            89.8
+          ],
+          [
+            282.13,
+            88.3
+          ],
+          [
+            282.33,
+            86.8
+          ],
+          [
+            282.53,
+            80.8
+          ],
+          [
+            282.73,
+            73.6
+          ],
+          [
+            282.93,
+            64.3
+          ],
+          [
+            283.13,
+            53.4
+          ],
+          [
+            283.33,
+            44.3
+          ],
+          [
+            283.53,
+            34.9
+          ],
+          [
+            283.73,
+            27.7
+          ],
+          [
+            283.93,
+            23.9
+          ],
+          [
+            284.13,
+            21.1
+          ],
+          [
+            284.33,
+            20.8
+          ],
+          [
+            284.53,
+            21.3
+          ],
+          [
+            284.73,
+            21.5
+          ],
+          [
+            284.93,
+            21.2
+          ],
+          [
+            285.13,
+            21.6
+          ],
+          [
+            285.33,
+            20.6
+          ],
+          [
+            285.53,
+            22.0
+          ],
+          [
+            285.73,
+            24.3
+          ],
+          [
+            285.93,
+            30.0
+          ],
+          [
+            286.13,
+            35.9
+          ],
+          [
+            286.33,
+            45.6
+          ],
+          [
+            286.53,
+            53.9
+          ],
+          [
+            286.73,
+            63.6
+          ],
+          [
+            286.93,
+            72.1
+          ],
+          [
+            287.13,
+            80.3
+          ],
+          [
+            287.33,
+            85.7
+          ],
+          [
+            287.53,
+            88.6
+          ],
+          [
+            287.73,
+            89.3
+          ],
+          [
+            287.93,
+            89.8
+          ],
+          [
+            288.13,
+            89.3
+          ],
+          [
+            288.33,
+            90.4
+          ],
+          [
+            288.53,
+            89.5
+          ],
+          [
+            288.73,
+            85.6
+          ],
+          [
+            288.93,
+            80.7
+          ],
+          [
+            289.13,
+            73.9
+          ],
+          [
+            289.33,
+            65.2
+          ],
+          [
+            289.53,
+            57.6
+          ],
+          [
+            289.73,
+            48.1
+          ],
+          [
+            289.93,
+            41.2
+          ],
+          [
+            290.13,
+            35.2
+          ],
+          [
+            290.33,
+            30.4
+          ],
+          [
+            290.53,
+            28.7
+          ],
+          [
+            290.73,
+            28.6
+          ],
+          [
+            290.93,
+            28.3
+          ],
+          [
+            291.13,
+            28.4
+          ],
+          [
+            291.33,
+            29.0
+          ],
+          [
+            291.53,
+            29.5
+          ],
+          [
+            291.73,
+            32.1
+          ],
+          [
+            291.93,
+            38.6
+          ],
+          [
+            292.13,
+            46.5
+          ],
+          [
+            292.33,
+            56.4
+          ],
+          [
+            292.53,
+            67.4
+          ],
+          [
+            292.73,
+            76.0
+          ],
+          [
+            292.93,
+            83.1
+          ],
+          [
+            293.13,
+            88.4
+          ],
+          [
+            293.33,
+            89.4
+          ],
+          [
+            293.53,
+            90.2
+          ],
+          [
+            293.73,
+            89.8
+          ],
+          [
+            293.93,
+            90.0
+          ],
+          [
+            294.13,
+            89.1
+          ],
+          [
+            294.33,
+            90.0
+          ],
+          [
+            294.53,
+            90.0
+          ],
+          [
+            294.73,
+            89.4
+          ]
+        ]
+      }
+    }
+  ]
+}

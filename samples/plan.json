@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "plan-demo-001",
+  "name": "Post-rehab maintenance programme",
+  "created_at": "2026-10-17T10:00:00-04:00",
+  "start_date": "2026-10-19",
+  "end_date": "2026-12-13",
+  "patient": {
+    "id": "pt-001",
+    "name": "Demo Patient",
+    "condition": "Post-operative rehabilitation, completed physiotherapy"
+  },
+  "supervisor": {
+    "name": "Dr. Sample Physio",
+    "role": "Physiotherapist",
+    "contact": "clinic@example.com"
+  },
+  "goals": [
+    "Restore full knee and elbow range of motion",
+    "Exercise independently 3 times per week"
+  ],
+  "notes": "Stop and contact the clinic if you feel sharp pain.",
+  "items": [
+    {
+      "item_id": "squat-1",
+      "exercise_key": "squat",
+      "sets": 3,
+      "reps_per_set": 10,
+      "target_angle_deg": 90.0,
+      "hold_seconds": 0.0,
+      "rest_seconds": 45,
+      "side": "auto",
+      "notes": "Chest up, heels down",
+      "schedule": {
+        "start_date": "2026-10-19",
+        "end_date": "2026-12-13",
+        "days_of_week": [
+          "mon",
+          "wed",
+          "fri"
+        ]
+      },
+      "progression": [
+        {
+          "from_date": "2026-11-16",
+          "target_angle_deg": 100,
+          "reps_per_set": 12
+        }
+      ]
+    },
+    {
+      "item_id": "elbow-ext-1",
+      "exercise_key": "elbow_extension",
+      "sets": 3,
+      "reps_per_set": 12,
+      "target_angle_deg": 0.0,
+      "hold_seconds": 1.0,
+      "rest_seconds": 45,
+      "side": "right",
+      "notes": "Keep the upper arm still",
+      "schedule": {
+        "start_date": "2026-10-19",
+        "end_date": "2026-12-13",
+        "days_of_week": [
+          "tue",
+          "thu",
+          "sat"
+        ]
+      }
+    },
+    {
+      "item_id": "shoulder-ext-1",
+      "exercise_key": "shoulder_extension",
+      "sets": 2,
+      "reps_per_set": 12,
+      "target_angle_deg": 45.0,
+      "hold_seconds": 1.0,
+      "rest_seconds": 45,
+      "side": "right",
+      "notes": "",
+      "schedule": {
+        "start_date": "2026-10-19",
+        "end_date": "2026-12-13",
+        "days_of_week": [
+          "mon",
+          "wed",
+          "fri"
+        ]
+      }
+    },
+    {
+      "item_id": "hip-ext-1",
+      "exercise_key": "hip_extension",
+      "sets": 3,
+      "reps_per_set": 10,
+      "target_angle_deg": 20.0,
+      "hold_seconds": 2.0,
+      "rest_seconds": 45,
+      "side": "left",
+      "notes": "",
+      "schedule": {
+        "start_date": "2026-10-19",
+        "end_date": "2026-12-13",
+        "days_of_week": [
+          "tue",
+          "thu"
+        ]
+      }
+    }
+  ]
+}
