@@ -42,37 +42,57 @@ class InBlock(unittest.TestCase):
         json.dumps(out)
 
 
+class _Window:
+    """Stands in for the OpenCV window: hands out scripted key presses to the prompt (the 50 ms polls)."""
+    def __init__(self, keys):
+        self._keys, self.shown = iter(keys), []
+
+    def show(self, view):
+        self.shown.append(view)
+
+    def key(self, wait_ms=1):
+        return next(self._keys, 255) if wait_ms == 50 else 255     # the 350 ms "show the answer" pause is not a key read
+
+
 class Prompt(unittest.TestCase):
-    def test_prompt_reads_two_answers_and_can_skip(self):
+    def _run(self, keys):
         from types import SimpleNamespace
         from tracker import camera
         from tracker.block import BlockSession, Prescription
         from tracker.exercises import get_exercise
+        from tracker.voice import Voice
 
-        class Img:
-            shape = (720, 1280, 3)
-            def copy(self): return self
+        block = BlockSession(get_exercise("squat"), Prescription(1, 3, 90), START, side="both")
+        win = _Window(keys)
+        runner = camera._Runner(None, None, None, None, SimpleNamespace(device={"frame_size": None}), [block],
+                                win, Voice(enabled=False), True, True, None)
+        runner.ask_checkin(block, 1)
+        return block, runner, win
 
-        def make(keys):
-            it = iter(keys)
-            cv2 = SimpleNamespace(putText=lambda *a, **k: None, imshow=lambda *a, **k: None,
-                                  waitKey=lambda ms: next(it), FONT_HERSHEY_SIMPLEX=0)
-            return cv2
-
-        spec = get_exercise("squat")
-        mk = lambda: BlockSession(spec, Prescription(1, 3, 90), START, side="both")
-        b = mk()
-        self.assertTrue(camera._ask_checkin(make([255, ord("4"), ord("t")]), Img(), b))   # unrelated key is ignored
+    def test_prompt_reads_two_answers(self):
+        b, r, win = self._run([255, ord("4"), ord("t")])             # an unrelated key is ignored
         self.assertEqual(b.patient_report["pain_0_10"], 4)
         self.assertEqual(b.patient_report["effort_0_10"], 10)
-        b = mk()
-        self.assertTrue(camera._ask_checkin(make([ord("2"), ord(" ")]), Img(), b))        # skip the second question
+        self.assertFalse(r.quit)
+        self.assertEqual(win.shown[0].question, "Pain during this exercise?")
+        self.assertEqual({v.palette for v in win.shown}, {"pain", "effort"})
+        self.assertIn(4, [v.selected for v in win.shown])             # the chosen number is shown for a moment
+
+    def test_a_question_can_be_skipped(self):
+        b, _, _ = self._run([ord("2"), ord(" ")])
         self.assertEqual(b.patient_report, {"pain_0_10": 2, "effort_0_10": None, "note": None})
-        b = mk()
-        self.assertTrue(camera._ask_checkin(make([32, 32]), Img(), b))                    # skip both
+        b, _, _ = self._run([32, 32])
         self.assertIsNone(b.patient_report)
-        b = mk()
-        self.assertFalse(camera._ask_checkin(make([ord("q")]), Img(), b))                 # q quits everything
+
+    def test_q_quits_everything(self):
+        _, r, _ = self._run([ord("q")])
+        self.assertTrue(r.quit)
+
+    def test_nobody_answering_ends_by_itself(self):
+        b, r, win = self._run([])                                     # 255 forever: times out, no hang
+        self.assertIsNone(b.patient_report)
+        self.assertFalse(r.quit)
+        self.assertLessEqual(len(win.shown), 2 * 600 + 2)
 
 
 if __name__ == "__main__":

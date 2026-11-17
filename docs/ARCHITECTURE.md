@@ -22,6 +22,13 @@ target angle, form checks). Everything downstream is generic.
 5. `block.py` groups reps into sets and one prescribed exercise, and holds the optional `patient_report`.
 6. `session.py` writes `session_*.json`. `checkin.py` handles the pain and effort questions.
 
+What the patient sees and hears is split in three so it can be tested without a camera:
+`coach.py` (pure Python) decides the short instruction, its tone and the spoken sentence; `ui/` draws it with a
+`View` data object (Pillow for text, OpenCV for the skeleton and dial; 1280x800, scaled by the window; the mirror
+flip happens inside the renderer, so the tracker still sees the unflipped picture); `voice.py` speaks it
+(`say` / `espeak`, repeats nothing within 4 s). `ReadyGate` in `coach.py` starts an exercise after the patient has
+held position for 1.5 s plus a 3 s countdown. `tools/preview_ui.py` renders every screen to PNG.
+
 Everything except `camera.py` is pure Python and is tested with synthetic stick-figure poses (`synthetic.py`).
 
 ## Website (`web/src/`)

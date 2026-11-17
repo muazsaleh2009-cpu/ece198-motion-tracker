@@ -20,12 +20,15 @@ therapypal/
 │   └── synthetic.py         stick-figure poses for tests and demo data
 ├── tracker/cli.py           command line (python -m tracker, or the run_session.py shortcut)
 │   └── checkin.py           post-exercise pain / effort questions
+├── tracker/coach.py         the short instructions shown (and spoken) to the patient
+├── tracker/ui/              the camera screens: theme, fonts, renderer (uses the logo and Poppins in tracker/assets/)
+├── tracker/voice.py         optional spoken instructions
 ├── run_session.py           shortcut for python -m tracker
 ├── legacy/                  the original single-exercise scripts, kept for reference
 ├── Makefile                 make setup / test / web / check
 ├── .github/workflows/ci.yml python tests, web tests and a production build on every push
 ├── tools/                   export_catalog.py · simulate.py · expected_stats.py
-├── tests/                   48 tests (angles, counting, scoring, schedule rules, output, check-in, camera loop)
+├── tests/                   86 tests (angles, counting, scoring, schedule rules, output, check-in, coach, voice, screens, camera loop)
 ├── samples/                 demo plan + 21 simulated sessions + catalog
 ├── docs/                    DATA_CONTRACT.md (exact file formats, read first) · ARCHITECTURE.md · CHANGELOG.md
 └── web/                     the dashboard (React)
@@ -34,7 +37,7 @@ therapypal/
 ## Run the tracker
 
 ```bash
-pip install -r requirements.txt           # mediapipe, opencv
+pip install -r requirements.txt           # mediapipe, opencv, Pillow
 # the MediaPipe "Pose Landmarker (Full)" model is included as pose_landmarker.task
 
 python -m tracker --list                                   # the exercises and their angles
@@ -43,7 +46,19 @@ python -m tracker --plan plan.json --date 2026-11-18 --only squat,elbow_extensio
 python -m tracker --exercise squat --sets 2 --reps 8 --target 90   # ad-hoc, no plan
 ```
 
-Keys in the window: `q` quit · `e` end set early · `n` next exercise · `space` skip rest.
+The window is a designed screen: the TherapyPal logo, a very large rep counter, one big instruction at a time
+(for example "Bend your knees"), a dial that matches the website's, and a rest timer. The exercise starts by itself
+once the patient has stood in position for a moment (3, 2, 1), so nobody has to walk back to the keyboard.
+
+```bash
+python -m tracker --plan plan.json --voice --fullscreen     # spoken instructions + full screen
+python tools/preview_ui.py screens/                         # draw every screen to PNG files, no camera needed
+```
+
+Other flags: `--voice-rate 170` (words per minute) · `--no-intro` (start each exercise at once) · `--no-mirror`.
+Voice uses the built-in macOS `say` command (`espeak` on Linux); nothing to install. It is off by default.
+
+Keys in the window: `q` quit · `e` end set early · `n` next exercise · `space` start now / skip rest · `v` voice on or off · `f` full screen.
 After each exercise the patient is asked for pain and effort (0-9, `t` = 10, `space` skips). Use `--no-checkin` to turn that off.
 Each run writes one `sessions/session_<date>_<time>_<patient>.json`. Upload it on the website's Data tab.
 

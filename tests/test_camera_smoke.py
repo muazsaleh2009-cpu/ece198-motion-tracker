@@ -72,6 +72,12 @@ def _build_fakes(key, angles):
     return cv2, mp, state
 
 
+class _NullRenderer:
+    """Stands in for tracker.ui.Renderer (which needs real OpenCV): returns the frame untouched."""
+    def render(self, view):
+        return view.image
+
+
 class CameraLoop(unittest.TestCase):
     def test_full_session_through_the_camera_loop(self):
         key = "elbow_flexion"
@@ -89,7 +95,7 @@ class CameraLoop(unittest.TestCase):
                 block = BlockSession(spec, Prescription(1, 5, spec.default_target_angle_deg), started, side="left",
                                      plan_item_id="elbow-1", scheduled_date="2026-11-16", block_id="elbow-1-2026-11-16")
                 rec = SessionRecorder(patient_id="pt-001", plan_id="p1", started_at=started)
-                camera.run_session([block], rec, model_path=model, show_window=True)
+                camera.run_session([block], rec, model_path=model, show_window=True, guided=False, renderer=_NullRenderer())
                 path = rec.save(d)
                 data = json.load(open(path))
             self.assertEqual(data["device"]["frame_size"], [W, H])
@@ -128,7 +134,7 @@ class CameraLoop(unittest.TestCase):
                 started = datetime(2026, 11, 16, 9, 0).astimezone()
                 block = BlockSession(spec, Prescription(1, 5, spec.default_target_angle_deg), started, side="left")
                 rec = SessionRecorder(patient_id="pt-001", started_at=started)
-                camera.run_session([block], rec, model_path=model, show_window=True, checkin=True)
+                camera.run_session([block], rec, model_path=model, show_window=True, checkin=True, guided=False, renderer=_NullRenderer())
                 data = json.load(open(rec.save(d)))
             self.assertTrue(state_seen["asked"])
             self.assertEqual(data["blocks"][0]["patient_report"], {"pain_0_10": 3, "effort_0_10": 6, "note": None})

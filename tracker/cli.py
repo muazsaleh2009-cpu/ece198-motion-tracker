@@ -8,6 +8,8 @@
 
 `python run_session.py ...` does the same thing.
 
+  python -m tracker --plan plan.json --voice --fullscreen   # spoken prompts, full-screen window
+
 Each run writes ONE file, sessions/session_<date>_<time>_<patient>.json, which the website imports.
 """
 
@@ -43,6 +45,11 @@ def main(argv=None) -> int:
     ap.add_argument("--out", default="sessions", help="folder for session JSON files")
     ap.add_argument("--no-window", action="store_true")
     ap.add_argument("--no-checkin", action="store_true", help="do not ask for pain / effort after each exercise")
+    ap.add_argument("--voice", action="store_true", help="speak the instructions aloud (macOS: uses the built-in `say`). V toggles it in the window")
+    ap.add_argument("--voice-rate", type=int, default=175, help="speaking speed in words per minute")
+    ap.add_argument("--no-intro", action="store_true", help="skip the welcome and get-ready screens and start each exercise at once")
+    ap.add_argument("--no-mirror", action="store_true", help="show the camera picture as the camera sees it, not like a mirror")
+    ap.add_argument("--fullscreen", action="store_true", help="open the window full screen (F toggles it)")
     args = ap.parse_args(argv)
 
     if args.list:
@@ -52,12 +59,13 @@ def main(argv=None) -> int:
         return 0
 
     started = datetime.now().astimezone()
-    plan_id = patient_id = None
+    plan_id = patient_id = patient_name = None
     blocks = []
 
     if args.plan:
         plan = load_plan(args.plan)
         plan_id, patient_id = plan.get("plan_id"), (plan.get("patient") or {}).get("id")
+        patient_name = (plan.get("patient") or {}).get("name")
         day = parse_date(args.date) if args.date else date.today()
         only = set(args.only.split(",")) if args.only else None
         for item in items_for_date(plan, day):
@@ -85,8 +93,13 @@ def main(argv=None) -> int:
     print("Today:", ", ".join(f"{b.spec.name} ({b.prescription.sets}x{b.prescription.reps_per_set})" for b in blocks))
     try:
         from .camera import run_session   # imported here so --list and --help work without cv2 / mediapipe
+        from .voice import Voice
+        voice = Voice(enabled=args.voice, rate=args.voice_rate)
+        if args.voice and voice.unavailable:
+            print("Voice needs the macOS `say` command (or `espeak`). Continuing without sound.")
         run_session(blocks, recorder, camera_index=args.camera, model_path=args.model, show_window=not args.no_window,
-                    checkin=not args.no_checkin)
+                    checkin=not args.no_checkin, guided=not args.no_intro, voice=voice, patient_name=patient_name,
+                    mirror=not args.no_mirror, fullscreen=args.fullscreen)
     except KeyboardInterrupt:
         pass
     except (FileNotFoundError, RuntimeError) as e:   # missing model file, camera unavailable

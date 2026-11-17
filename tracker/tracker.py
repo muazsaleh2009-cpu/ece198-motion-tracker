@@ -210,6 +210,10 @@ class ExerciseTracker:
                 self._next_trace_t = t + 1.0 / config.TRACE_HZ
         self._cand = {"left": deque(), "right": deque()}
 
+    def view_mismatch(self, frame: PoseFrame) -> Optional[bool]:
+        """Public wrapper: True if the body looks like the wrong camera view, None if it cannot tell."""
+        return self._view_mismatch(frame)
+
     def _view_mismatch(self, frame: PoseFrame) -> Optional[bool]:
         """True if the body looks like the wrong camera view for this exercise."""
         sh = [frame.get(LIMB[s]["shoulder"], config.VISIBILITY_THRESHOLD) for s in ("left", "right")]
