@@ -1,7 +1,13 @@
 .venv/
 __pycache__/
 *.pyc
+.pytest_cache/
 .DS_Store
 pose_landmarker.task
 *.mp4
 *.mov
+sessions/
+web/node_modules/
+web/dist/
+web/dist-check/
+web/tests/.bundle*.mjs
