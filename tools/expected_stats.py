@@ -40,6 +40,7 @@ def main(argv=None) -> int:
 
     forms, roms = [], []
     per_ex_forms = defaultdict(list)
+    per_ex_pain = defaultdict(list)      # (started_at, pain, effort) per block with a check-in
     reps_total = 0
     for path in sorted(glob.glob(os.path.join(args.folder, "sessions", "*.json"))):
         s = json.load(open(path))
@@ -51,6 +52,9 @@ def main(argv=None) -> int:
                 roms.append((m["avg_rom_pct"], m["reps_completed"]))
                 per_ex_forms[b["exercise_key"]].append((m["avg_form_score"], m["reps_completed"]))
             reps_total += m["reps_completed"]
+            rep = b.get("patient_report")
+            if rep and rep.get("pain_0_10") is not None:
+                per_ex_pain[b["exercise_key"]].append((b["started_at"], rep["pain_0_10"], rep.get("effort_0_10")))
 
     def wavg(pairs):
         return sum(v * w for v, w in pairs) / sum(w for _, w in pairs)
@@ -90,7 +94,26 @@ def main(argv=None) -> int:
             "form_weighted": wavg(per_ex_forms[key]),
         }
     stats["per_exercise"] = per_ex
-    json.dump(stats, open(args.out, "w"), indent=2)
+
+    # Patient check-ins: pain 0-10 (lower is better). Flare = the last two sessions of an exercise both >= 6, or the latest >= 8.
+    pains = [p for rows in per_ex_pain.values() for _, p, _ in rows]
+    stats["pain_blocks"] = len(pains)
+    stats["pain_mean"] = sum(pains) / len(pains)
+    stats["pain_max"] = max(pains)
+    flare, last3_missed = [], []
+    for key, rows in per_ex_pain.items():
+        rows.sort()
+        per_ex[key]["pain_mean"] = sum(p for _, p, _ in rows) / len(rows)
+        per_ex[key]["pain_latest"] = rows[-1][1]
+        if rows[-1][1] >= 8 or (len(rows) >= 2 and rows[-1][1] >= 6 and rows[-2][1] >= 6):
+            flare.append(key)
+    for key in {o["key"] for o in occ.values()}:
+        mine = sorted((o for o in due if o["key"] == key), key=lambda o: o["date"])
+        if len(mine) >= 3 and all(o["done"] == 0 for o in mine[-3:]):
+            last3_missed.append(key)
+    stats["pain_flare"] = sorted(flare)
+    stats["last3_missed"] = sorted(last3_missed)
+    json.dump(stats, open(args.out, "w"), indent=2, sort_keys=True)
     print(json.dumps({k: v for k, v in stats.items() if k != "per_exercise"}, indent=1))
     return 0
 

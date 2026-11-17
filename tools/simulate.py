@@ -26,6 +26,7 @@ from tracker.synthetic import make_pose, rep_angles  # noqa: E402
 
 PLAN_START = date(2026, 10, 19)   # a Monday
 PLAN_END = date(2026, 12, 13)
+FLARE_FROM = "2026-11-09"          # squat pain flare-up used to demo the website alerts
 
 
 def build_sample_plan() -> dict:
@@ -130,6 +131,14 @@ def simulate_block(spec, rx: Prescription, started_at: datetime, item: dict, day
             for _ in range(int(rx.rest_seconds * 10) + 5):
                 block.feed(t, None)
                 t += 0.1
+    # Patient check-in: pain eases over the programme (with one flare-up on the squat so the website's
+    # attention list has something to show), effort drops as the patient gets stronger.
+    if block.reps_counted:
+        pain = 4.5 * (1.0 - progress) + rng.gauss(0, 0.8)
+        if spec.key == "squat" and day.isoformat() >= FLARE_FROM:
+            pain += 3.5
+        effort = 6.0 - 2.5 * progress + rng.gauss(0, 0.8)
+        block.set_checkin(min(10, max(0, round(pain))), min(10, max(1, round(effort))))
     return block.finish()
 
 
@@ -137,7 +146,7 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="samples")
     ap.add_argument("--today", default="2026-11-15", help="last day that may contain a session")
-    ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--seed", type=int, default=11)
     args = ap.parse_args(argv)
 
     rng = random.Random(args.seed)

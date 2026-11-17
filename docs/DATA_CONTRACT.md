@@ -1,8 +1,9 @@
 # Data contract: plan.json and session.json
 
 The Python tracker and the website only talk through two JSON files. Both carry
-`"schema_version": "1.0"`. A change that the other side would have to adapt to bumps the **major**
-number; the website refuses files with a different major version.
+`"schema_version": "1.1"`. A change that the other side would have to adapt to bumps the **major**
+number; the website refuses files with a different major version. A **minor** bump only adds optional fields
+(1.1 added `patient_report`), so 1.0 and 1.1 files are both accepted.
 
 ```
 website ──plan.json──▶ tracker (run_session.py) ──session_*.json──▶ website
@@ -18,7 +19,7 @@ is the date written in the timestamp, so time zones never move a session to anot
 
 ```jsonc
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "plan_id": "plan-demo-001",              // required, text
   "name": "Post-rehab maintenance programme",
   "created_at": "2026-10-17T10:00:00-04:00",
@@ -82,14 +83,14 @@ One file per camera session. A session contains one **block** per exercise perfo
 
 ```jsonc
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "session_id": "20261114T173900-a1b2c3",       // unique; re-importing the same id replaces, never duplicates
   "patient_id": "pt-001",                        // website rejects a session whose patient differs from the plan
   "plan_id": "plan-demo-001",
   "started_at": "2026-11-14T17:39:00-05:00",
   "ended_at":   "2026-11-14T17:58:10-05:00",
   "duration_s": 1150.0,
-  "device": { "tracker": "therapypal-tracker", "tracker_version": "1.0.0", "pose_model": "mediapipe-pose-landmarker",
+  "device": { "tracker": "therapypal-tracker", "tracker_version": "1.1.0", "pose_model": "mediapipe-pose-landmarker",
               "camera_index": 0, "frame_size": [1280, 720] },
   "blocks": [ /* block, see below */ ]
 }
@@ -111,6 +112,7 @@ One file per camera session. A session contains one **block** per exercise perfo
 | `sets[]` | see below |
 | `summary` | `reps_planned`, `reps_completed`, `completion_pct`, `sets_recorded`, `reps_reached_target`, `avg_peak_angle_deg`, `best_peak_angle_deg`, `avg_rom_pct`, `avg_form_score`, `min_form_score`, `avg_rep_duration_s`, `avg_hold_s`, `flag_counts` (all computed over **counted** reps) |
 | `tracking` | `{frames, valid_frames, valid_pct, camera_view_mismatch_pct, side_used}`: data quality |
+| `patient_report` | optional (1.1): `{pain_0_10, effort_0_10, note}`, integers 0-10, each key present only if answered. See below |
 | `angle_trace` | `{hz: 5, unit: "deg", samples: [[t_seconds, angle], …]}`: smoothed angle over time, `t` counted from the block start |
 
 ### set → rep
@@ -133,6 +135,15 @@ One file per camera session. A session contains one **block** per exercise perfo
       "flags": ["short_of_target"]                 // see below
   } ] }
 ```
+
+### patient_report (new in 1.1)
+
+After the last set of an exercise that had at least one counted rep, the tracker window asks two questions:
+pain (0-10) and effort (0-10). Keys `0`-`9` answer, `t` means 10, `space`/`s`/`esc` skips, and each question
+times out after about 30 s so a patient who walked away never blocks the session. Run with `--no-checkin` to
+turn the questions off. Blocks without answers simply have no `patient_report`.
+
+The website flags a **pain flare** when the latest pain rating is 8 or more, or the last two ratings are both 6 or more.
 
 ### flags
 

@@ -1,36 +1,51 @@
 {
   "occurrences": 88,
   "due": 44,
-  "done": 14,
-  "partial": 21,
-  "missed": 9,
+  "done": 19,
+  "partial": 17,
+  "missed": 8,
   "reps_planned": 1320,
-  "reps_credited": 994,
-  "reps_total": 994,
-  "form_weighted": 91.37786720321932,
-  "rom_weighted": 81.52897384305835,
-  "longest_streak": 4,
-  "current_streak": 1,
+  "reps_credited": 1047,
+  "reps_total": 1047,
+  "form_weighted": 91.17468958930276,
+  "rom_weighted": 81.08519579751672,
+  "longest_streak": 7,
+  "current_streak": 5,
   "per_exercise": {
-    "shoulder_extension": {
-      "reps_credited": 198,
-      "missed": 3,
-      "form_weighted": 91.09646464646464
-    },
     "hip_extension": {
-      "reps_credited": 202,
+      "reps_credited": 207,
       "missed": 1,
-      "form_weighted": 92.18267326732673
+      "form_weighted": 92.49710144927536,
+      "pain_mean": 3.5714285714285716,
+      "pain_latest": 3
     },
     "squat": {
-      "reps_credited": 224,
+      "reps_credited": 281,
+      "missed": 2,
+      "form_weighted": 89.58932384341637,
+      "pain_mean": 4.8,
+      "pain_latest": 7
+    },
+    "shoulder_extension": {
+      "reps_credited": 177,
       "missed": 4,
-      "form_weighted": 90.13571428571429
+      "form_weighted": 91.12937853107344,
+      "pain_mean": 3.375,
+      "pain_latest": 2
     },
     "elbow_extension": {
-      "reps_credited": 370,
+      "reps_credited": 382,
       "missed": 1,
-      "form_weighted": 91.84108108108107
+      "form_weighted": 91.64528795811518,
+      "pain_mean": 3.3636363636363638,
+      "pain_latest": 2
     }
-  }
+  },
+  "pain_blocks": 36,
+  "pain_mean": 3.8055555555555554,
+  "pain_max": 7,
+  "pain_flare": [
+    "squat"
+  ],
+  "last3_missed": []
 }

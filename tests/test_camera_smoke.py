@@ -72,6 +72,12 @@ def _build_fakes(key, angles):
     return cv2, mp, state
 
 
+class _NullRenderer:
+    """Stands in for tracker.ui.Renderer (which needs real OpenCV): returns the frame untouched."""
+    def render(self, view):
+        return view.image
+
+
 class CameraLoop(unittest.TestCase):
     def test_full_session_through_the_camera_loop(self):
         key = "elbow_flexion"
@@ -89,7 +95,7 @@ class CameraLoop(unittest.TestCase):
                 block = BlockSession(spec, Prescription(1, 5, spec.default_target_angle_deg), started, side="left",
                                      plan_item_id="elbow-1", scheduled_date="2026-11-16", block_id="elbow-1-2026-11-16")
                 rec = SessionRecorder(patient_id="pt-001", plan_id="p1", started_at=started)
-                camera.run_session([block], rec, model_path=model, show_window=True)
+                camera.run_session([block], rec, model_path=model, show_window=True, guided=False, renderer=_NullRenderer())
                 path = rec.save(d)
                 data = json.load(open(path))
             self.assertEqual(data["device"]["frame_size"], [W, H])
@@ -102,6 +108,40 @@ class CameraLoop(unittest.TestCase):
             sys.modules.pop("cv2", None)
             sys.modules.pop("mediapipe", None)
             sys.modules.pop("tracker.camera", None)
+
+    def test_checkin_is_asked_after_the_block_and_saved(self):
+        key = "elbow_flexion"
+        spec = get_exercise(key)
+        curve = list(rep_angles(spec.start_angle_deg, spec.default_target_angle_deg, 5, fps=30))
+        cv2, mp, state = _build_fakes(key, curve)
+        answers = iter([ord("3"), ord("6")])
+        state_seen = {"asked": False}
+
+        def wait(ms):                       # during playback: no key; once the video is over the prompt reads 3 then 6
+            if ms == 50:
+                state_seen["asked"] = True
+                return next(answers)
+            return 255
+        cv2.waitKey = wait
+        cv2.imshow = lambda *a, **k: None
+        sys.modules["cv2"], sys.modules["mediapipe"] = cv2, mp
+        try:
+            from tracker import camera
+            camera.time = types.SimpleNamespace(monotonic=lambda: state["t"])
+            with tempfile.TemporaryDirectory() as d:
+                model = os.path.join(d, "pose_landmarker.task")
+                open(model, "wb").close()
+                started = datetime(2026, 11, 16, 9, 0).astimezone()
+                block = BlockSession(spec, Prescription(1, 5, spec.default_target_angle_deg), started, side="left")
+                rec = SessionRecorder(patient_id="pt-001", started_at=started)
+                camera.run_session([block], rec, model_path=model, show_window=True, checkin=True, guided=False, renderer=_NullRenderer())
+                data = json.load(open(rec.save(d)))
+            self.assertTrue(state_seen["asked"])
+            self.assertEqual(data["blocks"][0]["patient_report"], {"pain_0_10": 3, "effort_0_10": 6, "note": None})
+            self.assertEqual(data["schema_version"], "1.1")
+        finally:
+            for m in ("cv2", "mediapipe", "tracker.camera"):
+                sys.modules.pop(m, None)
 
     def test_missing_model_file_gives_a_clear_error(self):
         cv2, mp, _ = _build_fakes("squat", [])
