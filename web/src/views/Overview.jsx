@@ -177,11 +177,10 @@ export default function Overview({ plan, all, blocks, filters, today, notes, onA
         </div>
         <div className="kc-table-scroll">
           <table className="kc-table">
-            <thead><tr><th>Exercise</th><th>Scheduled sessions</th><th>Repetitions</th><th>Form</th><th>Form trend</th><th>Range reached</th><th>Angle trend</th><th>Pain</th><th>Main issue</th></tr></thead>
+            <thead><tr><th>Exercise</th><th>Sessions</th><th>Repetitions</th><th>Form</th><th>Form trend</th><th>Range reached</th><th>Angle trend</th><th>Pain</th></tr></thead>
             <tbody>
               {sums.map((s) => {
                 const ad = s.adherence;
-                const f = s.flags.find((x) => x.flag !== 'short_of_target');
                 return (
                   <tr key={s.key} className="kc-row-click" tabIndex={0} onClick={() => goExercise(s.key)} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), goExercise(s.key))} aria-label={`Open ${s.name}`}>
                     <td><strong>{s.name}</strong><div className="kc-muted" style={{ fontSize: '.82rem' }}>{s.group}</div></td>
@@ -191,8 +190,7 @@ export default function Overview({ plan, all, blocks, filters, today, notes, onA
                     <td><TrendBadge trend={s.improvement.form} /></td>
                     <td className="kc-num">{s.performance.rom == null ? '–' : `${num(s.performance.rom, 0)}%`}</td>
                     <td><TrendBadge trend={s.improvement.peak} unit="°" /></td>
-                    <td className="kc-num">{s.pain.n ? <><strong style={{ color: s.pain.latest >= 6 ? 'var(--kc-danger)' : undefined }}>{s.pain.latest}</strong><span className="kc-muted"> latest · avg {num(s.pain.mean, 1)}</span></> : <span className="kc-muted">–</span>}</td>
-                    <td style={{ fontSize: '.88rem' }}>{f && f.pct >= 0.05 ? <>{f.label} <span className="kc-muted">({pct(f.pct)} of reps)</span></> : <span className="kc-muted">{s.performance.reps ? 'None' : '–'}</span>}</td>
+                    <td className="kc-num">{s.pain.n ? <><strong style={{ color: s.pain.latest >= 6 ? 'var(--kc-danger)' : undefined }}>{s.pain.latest}</strong><span className="kc-muted"> · avg {num(s.pain.mean, 1)}</span></> : <span className="kc-muted">–</span>}</td>
                   </tr>
                 );
               })}

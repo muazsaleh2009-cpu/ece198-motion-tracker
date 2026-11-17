@@ -237,15 +237,17 @@ button.kc-dial:hover{border-color:var(--kc-primary);background:var(--kc-surface-
 
 /* ---- tables ---- */
 .kc-table-scroll{width:100%;overflow-x:auto}
+.kc-table td:first-child,.kc-table th:first-child{padding-left:18px;min-width:130px}
+.kc-table td:last-child,.kc-table th:last-child{padding-right:18px}
 .kc-table{width:100%;border-collapse:collapse;text-align:left}
-.kc-table th{padding:11px 16px;font-size:.82rem;font-weight:700;color:var(--kc-text-2);background:var(--kc-surface-2);border-bottom:1px solid var(--kc-border);white-space:nowrap}
-.kc-table td{padding:12px 16px;font-size:.92rem;border-bottom:1px solid var(--kc-border);vertical-align:middle}
+.kc-table th{padding:11px 12px;font-size:.82rem;font-weight:700;color:var(--kc-text-2);background:var(--kc-surface-2);border-bottom:1px solid var(--kc-border);white-space:nowrap}
+.kc-table td{padding:12px 12px;font-size:.92rem;border-bottom:1px solid var(--kc-border);vertical-align:middle}
 .kc-table tbody tr:last-child td{border-bottom:none}
 .kc-table tbody tr.kc-row-click{cursor:pointer}
 .kc-table tbody tr.kc-row-click:hover{background:var(--kc-surface-2)}
 .kc-row-detail td{background:var(--kc-surface-2);padding:16px 20px}
 .kc-group-row td{background:var(--kc-surface-2);font-weight:700;font-size:.85rem;color:var(--kc-text-2)}
-.kc-mini-bar{display:inline-block;width:84px;height:8px;border-radius:999px;background:var(--kc-border);overflow:hidden;vertical-align:middle;margin-right:8px}
+.kc-mini-bar{display:inline-block;width:64px;height:8px;border-radius:999px;background:var(--kc-border);overflow:hidden;vertical-align:middle;margin-right:8px}
 .kc-mini-fill{display:block;height:100%;border-radius:999px}
 .kc-progress-track{width:100%;height:8px;border-radius:999px;background:var(--kc-surface-2);border:1px solid var(--kc-border);overflow:hidden}
 .kc-progress-fill{height:100%;background:var(--kc-primary);border-radius:999px;transition:width .3s ease}
