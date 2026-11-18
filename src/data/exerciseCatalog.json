@@ -1,0 +1,429 @@
+{
+  "schema_version": "1.1",
+  "exercises": [
+    {
+      "key": "squat",
+      "name": "Squat",
+      "group": "Lower body",
+      "joint": "knee",
+      "movement": "flexion",
+      "camera_view": "side",
+      "sided": false,
+      "angle_label": "Knee flexion",
+      "convention": "0 deg = standing with straight knees; larger = deeper squat (knees bent). Average of both knees.",
+      "direction": "increase",
+      "start_angle_deg": 5.0,
+      "default_target_angle_deg": 90.0,
+      "target_bounds_deg": [
+        30.0,
+        135.0
+      ],
+      "rep_duration_s": [
+        1.5,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 10,
+      "default_hold_s": 0.0,
+      "setup": "Stand (or sit) side-on to the camera, 2 to 3 m away, with the working side toward the camera and your whole body in view.",
+      "description": "Bend both knees and hips to lower the body, then stand back up.",
+      "form_checks": [
+        {
+          "key": "trunk_lean_forward",
+          "label": "Forward trunk lean",
+          "mode": "abs",
+          "limit_deg": 55.0,
+          "message": "Keep your chest up, you are leaning too far forward"
+        }
+      ]
+    },
+    {
+      "key": "standing_knee_flexion",
+      "name": "Standing knee flexion (hamstring curl)",
+      "group": "Lower body",
+      "joint": "knee",
+      "movement": "flexion",
+      "camera_view": "side",
+      "sided": true,
+      "angle_label": "Knee flexion",
+      "convention": "0 deg = leg straight; larger = heel moving toward the buttock.",
+      "direction": "increase",
+      "start_angle_deg": 5.0,
+      "default_target_angle_deg": 90.0,
+      "target_bounds_deg": [
+        30.0,
+        135.0
+      ],
+      "rep_duration_s": [
+        1.5,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 0.0,
+      "setup": "Stand (or sit) side-on to the camera, 2 to 3 m away, with the working side toward the camera and your whole body in view.",
+      "description": "Standing, bend one knee to bring the heel toward the buttock, then lower it.",
+      "form_checks": [
+        {
+          "key": "thigh_drift",
+          "label": "Thigh movement",
+          "mode": "drift",
+          "limit_deg": 15.0,
+          "message": "Keep your thigh still and move only the lower leg"
+        },
+        {
+          "key": "trunk_motion",
+          "label": "Trunk motion",
+          "mode": "drift",
+          "limit_deg": 12.0,
+          "message": "Keep your body still and move only the working joint"
+        }
+      ]
+    },
+    {
+      "key": "seated_knee_extension",
+      "name": "Seated knee extension",
+      "group": "Lower body",
+      "joint": "knee",
+      "movement": "extension",
+      "camera_view": "side",
+      "sided": true,
+      "angle_label": "Knee flexion (0 = fully extended)",
+      "convention": "Measured as knee flexion: starts about 90 deg (knee bent, seated) and falls toward 0 deg (leg straight).",
+      "direction": "decrease",
+      "start_angle_deg": 90.0,
+      "default_target_angle_deg": 0.0,
+      "target_bounds_deg": [
+        0.0,
+        45.0
+      ],
+      "rep_duration_s": [
+        2.0,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 2.0,
+      "setup": "Sit side-on to the camera on a chair, 2 to 3 m away, with the working leg toward the camera and the whole leg visible.",
+      "description": "Seated, straighten the knee until the leg is level, then lower it.",
+      "form_checks": [
+        {
+          "key": "thigh_drift",
+          "label": "Thigh movement",
+          "mode": "drift",
+          "limit_deg": 15.0,
+          "message": "Keep your thigh still and move only the lower leg"
+        },
+        {
+          "key": "trunk_motion",
+          "label": "Trunk motion",
+          "mode": "drift",
+          "limit_deg": 12.0,
+          "message": "Keep your body still and move only the working joint"
+        }
+      ]
+    },
+    {
+      "key": "hip_flexion",
+      "name": "Standing hip flexion (march)",
+      "group": "Lower body",
+      "joint": "hip",
+      "movement": "flexion",
+      "camera_view": "side",
+      "sided": true,
+      "angle_label": "Hip flexion",
+      "convention": "0 deg = thigh in line with the trunk (standing); larger = knee lifted forward.",
+      "direction": "increase",
+      "start_angle_deg": 0.0,
+      "default_target_angle_deg": 80.0,
+      "target_bounds_deg": [
+        30.0,
+        120.0
+      ],
+      "rep_duration_s": [
+        1.5,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 10,
+      "default_hold_s": 1.0,
+      "setup": "Stand (or sit) side-on to the camera, 2 to 3 m away, with the working side toward the camera and your whole body in view.",
+      "description": "Standing tall, lift one knee toward the chest, then lower it.",
+      "form_checks": [
+        {
+          "key": "trunk_motion",
+          "label": "Trunk motion",
+          "mode": "drift",
+          "limit_deg": 12.0,
+          "message": "Keep your body still and move only the working joint"
+        }
+      ]
+    },
+    {
+      "key": "hip_extension",
+      "name": "Standing hip extension",
+      "group": "Lower body",
+      "joint": "hip",
+      "movement": "extension",
+      "camera_view": "side",
+      "sided": true,
+      "angle_label": "Hip extension",
+      "convention": "0 deg = thigh in line with the trunk (standing); larger = leg swung backward behind the body.",
+      "direction": "increase",
+      "start_angle_deg": 0.0,
+      "default_target_angle_deg": 20.0,
+      "target_bounds_deg": [
+        8.0,
+        30.0
+      ],
+      "rep_duration_s": [
+        1.5,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 1.0,
+      "setup": "Stand (or sit) side-on to the camera, 2 to 3 m away, with the working side toward the camera and your whole body in view.",
+      "description": "Standing tall, swing one straight leg backward without leaning, then return.",
+      "form_checks": [
+        {
+          "key": "trunk_motion",
+          "label": "Trunk motion",
+          "mode": "drift",
+          "limit_deg": 12.0,
+          "message": "Keep your body still and move only the working joint"
+        }
+      ]
+    },
+    {
+      "key": "hip_abduction",
+      "name": "Standing hip abduction",
+      "group": "Lower body",
+      "joint": "hip",
+      "movement": "abduction",
+      "camera_view": "front",
+      "sided": true,
+      "angle_label": "Hip abduction",
+      "convention": "0 deg = leg straight down beside the other leg; larger = leg lifted out to the side.",
+      "direction": "increase",
+      "start_angle_deg": 0.0,
+      "default_target_angle_deg": 35.0,
+      "target_bounds_deg": [
+        10.0,
+        45.0
+      ],
+      "rep_duration_s": [
+        1.5,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 1.0,
+      "setup": "Face the camera, 2 to 3 m away, with your whole body in view and arms/legs clear of your body.",
+      "description": "Standing tall, lift one straight leg out to the side, then lower it.",
+      "form_checks": [
+        {
+          "key": "trunk_lean_sideways",
+          "label": "Sideways trunk lean",
+          "mode": "drift",
+          "limit_deg": 10.0,
+          "message": "Stand tall, do not lean to the side"
+        }
+      ]
+    },
+    {
+      "key": "elbow_flexion",
+      "name": "Elbow flexion (bicep curl)",
+      "group": "Upper body",
+      "joint": "elbow",
+      "movement": "flexion",
+      "camera_view": "side",
+      "sided": true,
+      "angle_label": "Elbow flexion",
+      "convention": "0 deg = arm straight; larger = elbow more bent (hand toward the shoulder).",
+      "direction": "increase",
+      "start_angle_deg": 10.0,
+      "default_target_angle_deg": 140.0,
+      "target_bounds_deg": [
+        60.0,
+        150.0
+      ],
+      "rep_duration_s": [
+        1.5,
+        6.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 0.0,
+      "setup": "Stand (or sit) side-on to the camera, 2 to 3 m away, with the working side toward the camera and your whole body in view.",
+      "description": "With the upper arm still at your side, bend the elbow to bring the hand to the shoulder.",
+      "form_checks": [
+        {
+          "key": "upper_arm_drift",
+          "label": "Upper arm movement",
+          "mode": "drift",
+          "limit_deg": 20.0,
+          "message": "Keep your upper arm still next to your body"
+        },
+        {
+          "key": "trunk_motion",
+          "label": "Trunk motion",
+          "mode": "drift",
+          "limit_deg": 12.0,
+          "message": "Keep your body still and move only the working joint"
+        }
+      ]
+    },
+    {
+      "key": "elbow_extension",
+      "name": "Elbow extension (triceps)",
+      "group": "Upper body",
+      "joint": "elbow",
+      "movement": "extension",
+      "camera_view": "side",
+      "sided": true,
+      "angle_label": "Elbow flexion (0 = fully extended)",
+      "convention": "Measured as elbow flexion: starts about 90 deg (elbow bent) and falls toward 0 deg (arm straight).",
+      "direction": "decrease",
+      "start_angle_deg": 90.0,
+      "default_target_angle_deg": 0.0,
+      "target_bounds_deg": [
+        0.0,
+        45.0
+      ],
+      "rep_duration_s": [
+        1.5,
+        6.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 1.0,
+      "setup": "Stand (or sit) side-on to the camera, 2 to 3 m away, with the working side toward the camera and your whole body in view.",
+      "description": "Starting with the elbow bent at 90 degrees, straighten the arm fully, then bend it again.",
+      "form_checks": [
+        {
+          "key": "upper_arm_drift",
+          "label": "Upper arm movement",
+          "mode": "drift",
+          "limit_deg": 20.0,
+          "message": "Keep your upper arm still next to your body"
+        },
+        {
+          "key": "trunk_motion",
+          "label": "Trunk motion",
+          "mode": "drift",
+          "limit_deg": 12.0,
+          "message": "Keep your body still and move only the working joint"
+        }
+      ]
+    },
+    {
+      "key": "shoulder_flexion",
+      "name": "Shoulder flexion (forward raise)",
+      "group": "Upper body",
+      "joint": "shoulder",
+      "movement": "flexion",
+      "camera_view": "side",
+      "sided": true,
+      "angle_label": "Shoulder flexion",
+      "convention": "0 deg = arm hanging beside the trunk; 90 deg = arm horizontal in front; 180 deg = overhead.",
+      "direction": "increase",
+      "start_angle_deg": 0.0,
+      "default_target_angle_deg": 150.0,
+      "target_bounds_deg": [
+        60.0,
+        180.0
+      ],
+      "rep_duration_s": [
+        2.0,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 1.0,
+      "setup": "Stand (or sit) side-on to the camera, 2 to 3 m away, with the working side toward the camera and your whole body in view.",
+      "description": "Raise the straight arm forward and up, then lower it slowly.",
+      "form_checks": [
+        {
+          "key": "trunk_motion",
+          "label": "Trunk motion",
+          "mode": "drift",
+          "limit_deg": 12.0,
+          "message": "Keep your body still and move only the working joint"
+        }
+      ]
+    },
+    {
+      "key": "shoulder_extension",
+      "name": "Shoulder extension",
+      "group": "Upper body",
+      "joint": "shoulder",
+      "movement": "extension",
+      "camera_view": "side",
+      "sided": true,
+      "angle_label": "Shoulder extension",
+      "convention": "0 deg = arm hanging beside the trunk; larger = arm swung backward behind the body.",
+      "direction": "increase",
+      "start_angle_deg": 0.0,
+      "default_target_angle_deg": 45.0,
+      "target_bounds_deg": [
+        10.0,
+        60.0
+      ],
+      "rep_duration_s": [
+        1.5,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 1.0,
+      "setup": "Stand (or sit) side-on to the camera, 2 to 3 m away, with the working side toward the camera and your whole body in view.",
+      "description": "With a straight arm, swing it backward behind the body without leaning, then return.",
+      "form_checks": [
+        {
+          "key": "trunk_motion",
+          "label": "Trunk motion",
+          "mode": "drift",
+          "limit_deg": 12.0,
+          "message": "Keep your body still and move only the working joint"
+        }
+      ]
+    },
+    {
+      "key": "shoulder_abduction",
+      "name": "Shoulder abduction (lateral raise)",
+      "group": "Upper body",
+      "joint": "shoulder",
+      "movement": "abduction",
+      "camera_view": "front",
+      "sided": true,
+      "angle_label": "Shoulder abduction",
+      "convention": "0 deg = arm hanging beside the trunk; 90 deg = arm horizontal out to the side; 180 deg = overhead.",
+      "direction": "increase",
+      "start_angle_deg": 0.0,
+      "default_target_angle_deg": 150.0,
+      "target_bounds_deg": [
+        60.0,
+        180.0
+      ],
+      "rep_duration_s": [
+        2.0,
+        8.0
+      ],
+      "default_sets": 3,
+      "default_reps": 12,
+      "default_hold_s": 1.0,
+      "setup": "Face the camera, 2 to 3 m away, with your whole body in view and arms/legs clear of your body.",
+      "description": "Raise the straight arm out to the side and up, then lower it slowly.",
+      "form_checks": [
+        {
+          "key": "trunk_lean_sideways",
+          "label": "Sideways trunk lean",
+          "mode": "drift",
+          "limit_deg": 10.0,
+          "message": "Stand tall, do not lean to the side"
+        }
+      ]
+    }
+  ]
+}
